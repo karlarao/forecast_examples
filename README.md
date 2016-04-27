@@ -2,7 +2,7 @@
 ### ETS
 
 #### 12 months cycle
-<a href="https://github.com/karlarao/blog/blob/master/images/20160427_forecast_examples/image3_50m_ets.png?raw=true" target="_blank">
+<a href="https://raw.githubusercontent.com/karlarao/blog/master/images/20160427_forecast_examples/image3_50m_ets.png" target="_blank">
 <img class="aligncenter" style="width: 600px;" src="https://github.com/karlarao/blog/blob/master/images/20160427_forecast_examples/image3_50m_ets.png?raw=true" />
 </a>
 
