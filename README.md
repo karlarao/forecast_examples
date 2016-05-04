@@ -1,4 +1,7 @@
 
+
+
+
 ### ETS
 
 #### 12 months cycle
@@ -29,3 +32,9 @@
 <a href="https://github.com/karlarao/blog/blob/master/images/20160427_forecast_examples/image8_50m_1c_lr.png?raw=true" target="_blank">
 <img class="aligncenter" style="width: 600px;" src="https://github.com/karlarao/blog/blob/master/images/20160427_forecast_examples/image8_50m_1c_lr.png?raw=true" />
 </a>
+
+----------
+
+#### forecasting references
+* Forecasting time series using R by Prof Rob J Hyndman at Melbourne R Users https://www.youtube.com/watch?v=1Lh1HlBUf8k
+* forecasting books  https://www.otexts.org/book/fpp , http://www.forecastingbook.com
