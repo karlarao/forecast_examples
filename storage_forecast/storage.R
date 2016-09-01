@@ -11,14 +11,14 @@ xdata2 <- zoo(xdata$Value, xdata$Date)
 xdata3 <- ts(xdata2)
 
 # validate data
-# autoplot(xdata2)  # graph data
-# xdata3 <- ts(xdata$Value, start=c(2016,01),frequency = 365/60); autoplot(decompose(xdata3)) # hack to get decomposition
-# tsdisplay(xdata3) # check seasonality and autocorrelation
-# tsdisplay(diff(xdata3, lag=1)) # check seasonality and autocorrelation
+autoplot(xdata2)  # graph data
+xdata3 <- ts(xdata$Value, start=c(2016,01),frequency = 365/60); autoplot(decompose(xdata3)) # hack to get decomposition
+tsdisplay(xdata3) # check seasonality and autocorrelation
+tsdisplay(diff(xdata3, lag=1)) # check seasonality and autocorrelation
 
 # save new data to excel sheet
-# writeWorksheet (workbook, data=xdata, sheet="Sheet1", header = TRUE)
-# saveWorkbook(workbook, file = "storage2.xlsx")
+writeWorksheet (workbook, data=xdata, sheet="Sheet1", header = TRUE)
+saveWorkbook(workbook, file = "storage2.xlsx")
 
 # generate forecast
 # e <- ets(xdata3) 
