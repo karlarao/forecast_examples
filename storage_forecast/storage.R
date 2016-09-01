@@ -1,4 +1,14 @@
-# set current directory
+library(forecast)
+library(zoo)
+library(xts)
+library(timeSeries)
+library(ggfortify)
+library(XLConnect)
+library(dplyr)
+library(lubridate)
+library(tseries)
+
+# my function to set current directory
 set_current_directory()
 
 # load excel data 
