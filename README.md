@@ -1,6 +1,21 @@
 
 
+----------
 
+#### thank you Galit Shmueli :)
+<a href="https://raw.githubusercontent.com/karlarao/forecast_examples/master/book/ty2.png?raw=true" target="_blank">
+<img class="aligncenter" style="width: 600px;" src="https://raw.githubusercontent.com/karlarao/forecast_examples/master/book/ty2.png?raw=true" />
+</a>
+
+----------
+
+#### forecasting references
+* Forecasting time series using R by Prof Rob J Hyndman at Melbourne R Users https://www.youtube.com/watch?v=1Lh1HlBUf8k
+* forecasting books  http://www.forecastingbook.com, https://www.otexts.org/book/fpp  
+
+----------
+
+#### forecast examples
 
 ### ETS
 
@@ -35,6 +50,12 @@
 
 ----------
 
-#### forecasting references
-* Forecasting time series using R by Prof Rob J Hyndman at Melbourne R Users https://www.youtube.com/watch?v=1Lh1HlBUf8k
-* forecasting books  https://www.otexts.org/book/fpp , http://www.forecastingbook.com
+#### other examples
+
+* storage forecasting  
+  * https://github.com/karlarao/forecast_examples/tree/master/storage_forecast
+
+
+
+
+
