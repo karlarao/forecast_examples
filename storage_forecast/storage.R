@@ -21,8 +21,12 @@ xdata3 <- ts(xdata2)
 # saveWorkbook(workbook, file = "storage2.xlsx")
 
 # generate forecast
-e <- ets(xdata3) 
-f <- forecast(xdata3,h=length(xdata3), level=FALSE)
+# e <- ets(xdata3) 
+# e <- tslm(xdata3 ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
+# rma <- rollmean(xdata3, k = 12, align = "right")
+# e <- tslm(rma ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
+e <- tslm(xdata3 ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
+f <- forecast(e,h=length(xdata3), level=FALSE)
 GB <- append(xdata$Value,f$mean)
 
 # plot 
