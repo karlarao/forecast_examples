@@ -1,6 +1,8 @@
 library("forecast")
 library("zoo")
 
+set_current_directory()
+
 # import data and create time series object
 Amtrak.data <- read.csv("Amtrak data.csv")
 ridership.ts <- ts(Amtrak.data$Ridership, start = c(1991, 1), end = c(2004, 3), freq = 12)
@@ -25,7 +27,7 @@ plot(hw.pred, ylim = c(1300, 2600),  ylab = "Ridership", xlab = "Time", bty = "l
 axis(1, at = seq(1991, 2006, 1), labels = format(seq(1991, 2006, 1)))
 lines(hw.pred$fitted, lwd = 2, col = "blue")
 lines(valid.ts)
-lines(c(2004.25 - 3, 2004.25 - 3), c(0, 3500)) 
+lines(c(2004.25 - 3, 2004.25 - 3), c(0, 3500))
 lines(c(2004.25, 2004.25), c(0, 3500))
 text(1996.25, 2500, "Training")
 text(2002.75, 2500, "Validation")
