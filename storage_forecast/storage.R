@@ -60,7 +60,7 @@ legend("topleft",
          paste0("(Start Day ", as.Date(min(xdata$Date)) ,")"),
          paste0("Current Day ", as.Date(max(xdata$Date))), 
          paste0("Capacity (", capacity, "GB)"), 
-         paste0(threshold,"% Capacity on ",as.character(format(forecast_data_threshold[1],"%Y-%m-%d")))
+         paste0(threshold,"% on ",as.character(format(forecast_data_threshold[1],"%Y-%m-%d")), " (", as.character(as.Date(as.character(format(forecast_data_threshold[1],"%Y-%m-%d"))) - as.Date(max(xdata$Date)))," days)" )
        ),
        col=c("","blue","red","orange"), 
        lty=c(0,1,2,2),  
