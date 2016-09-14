@@ -41,16 +41,25 @@ saveWorkbook(workbook, file = "storage2.xlsx")
 # e <- tslm(rma ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
 e <- tslm(xdata3 ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
 f <- forecast(e,h=length(xdata3), level=FALSE)
+
+# add timestamp and other column measures
 GB <- append(xdata$Value,f$mean)
-# Time <- seq(as.Date(min(xdata$Date)), by = "days", length = length(xdata3)*2)  # create seq of dates
+# Time <- seq(as.Date(min(xdata$Date)), by = "days", length = length(xdata3)*2)  # create seq of days
 Time <- seq(min(xdata$Date), by = "hours", length = length(xdata3)*2) # create seq of hours
 forecast_data <- data.frame(Time,GB)
 forecast_data_threshold <- tail(subset(forecast_data, forecast_data$GB > capacity*((threshold-1)/100) & forecast_data$GB < capacity*(threshold/100) ),n=1)
+forecast_data$diff <- rbind(0, diff(as.ts(forecast_data[2])) )
+forecast_data$diff_pct <- rbind(0, diff(as.ts(forecast_data[2])) / as.ts(forecast_data[2])[-nrow(as.ts(forecast_data[2])),] * 100)
 
+# plot percentage increase
+par(mfrow=c(2, 1))
+plot(forecast_data$Time,abs(forecast_data$diff), type='l', cex.axis=.6, xlab = 'Time', ylab = 'diff GB')
+plot(forecast_data$Time,abs(forecast_data$diff_pct), type='l', cex.axis=.6, xlab = 'Time', ylab = 'diff_pct')
 
-#plot
+# plot forecast
+par(mfrow=c(1, 1))
 options(scipen=10)
-plot(forecast_data, main=paste0("Storage (", month(min(xdata$Date),label=TRUE,abbr=FALSE),")"), ylim=c(0,capacity*2),las=2,cex.axis=.6)
+plot(forecast_data$Time,forecast_data$GB, main=paste0("Storage (", month(min(xdata$Date),label=TRUE,abbr=FALSE),")"), ylim=c(0,capacity*2),las=2,cex.axis=.6, xlab = 'Time', ylab = 'GB')
 # axis(1, 1:length(xdata3)*2,  cex.axis = .7)   # just number index on x axis
 abline(h=capacity, col="red", lty=2)
 abline(h=as.numeric(forecast_data_threshold[2]), col="orange", lty=2)
