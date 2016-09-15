@@ -6,6 +6,9 @@
 * storage forecasting  
     * https://github.com/karlarao/forecast_examples/tree/master/storage_forecast
 
+* time series cross validation 
+    * https://github.com/karlarao/forecast_examples/tree/master/cross_validation
+
 * more coming soon...   
 
 ----------
