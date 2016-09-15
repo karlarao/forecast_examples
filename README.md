@@ -1,8 +1,16 @@
 
+----------
+
+#### examples
+
+* storage forecasting  
+    * https://github.com/karlarao/forecast_examples/tree/master/storage_forecast
+
+* more coming soon...   
 
 ----------
 
-#### thank you Galit Shmueli :)
+#### thank you Galit Shmueli 
 <a href="https://raw.githubusercontent.com/karlarao/forecast_examples/master/book/ty2.png?raw=true" target="_blank">
 <img class="aligncenter" style="width: 600px;" src="https://raw.githubusercontent.com/karlarao/forecast_examples/master/book/ty2.png?raw=true" />
 </a>
@@ -48,12 +56,6 @@
 <img class="aligncenter" style="width: 600px;" src="https://github.com/karlarao/blog/blob/master/images/20160427_forecast_examples/image8_50m_1c_lr.png?raw=true" />
 </a>
 
-----------
-
-#### other examples
-
-* storage forecasting  
-  * https://github.com/karlarao/forecast_examples/tree/master/storage_forecast
 
 
 
