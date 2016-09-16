@@ -26,9 +26,10 @@ xdata3 <- ts(xdata2)
 
 # validate data
 autoplot(xdata2)  # graph data
-xdata4 <- ts(xdata$Value, start=c(2016,01),frequency = 365/60); autoplot(decompose(xdata4)) # hack to get decompose to run
 tsdisplay(xdata3) # check seasonality and autocorrelation
 tsdisplay(diff(xdata3, lag=1)) # check seasonality and autocorrelation
+xdata4 <- ts(xdata$Value, start=c(2016,01),frequency = 365/60) # hack frequency to get decompose to run
+autoplot(decompose(xdata4)) # only check remainder/error and trend, seasonal data is bogus/hacked
 
 # save new data to excel sheet
 writeWorksheet (workbook, data=xdata, sheet="Sheet1", header = TRUE)
