@@ -24,12 +24,18 @@ xdata$Date <- as.POSIXct(xdata$Source, format="%Y-%m-%d/%H:%M:%S")
 xdata2 <- zoo(xdata$Value, xdata$Date)
 xdata3 <- ts(xdata2)
 
-# validate data
+# explore and validate data
 autoplot(xdata2)  # graph data
-tsdisplay(xdata3) # check seasonality and autocorrelation
-tsdisplay(diff(xdata3, lag=1)) # check seasonality and autocorrelation
+tsdisplay(xdata3) # check seasonality and autocorrelation of main series 
+tsdisplay(diff(xdata3, lag=1)) # check seasonality and autocorrelation diff'd series
 xdata4 <- ts(xdata$Value, start=c(2016,01),frequency = 365/60) # hack frequency to get decompose to run
-autoplot(decompose(xdata4)) # only check remainder/error and trend, seasonal data is bogus/hacked
+autoplot(decompose(xdata4)) # only check remainder/random/error and trend, seasonal data is bogus/hacked
+plot(decompose((decompose(xdata4)$random))) # even the error has a trend
+xdata5 <- decompose(xdata4)
+plot(xdata5$random)
+plot(decompose(xdata5$random)) # see trend on error
+plot(diff(xdata5$random,lag=1))
+plot(decompose(diff(xdata5$random,lag=1))) # remove trend on error
 
 # save new data to excel sheet
 writeWorksheet (workbook, data=xdata, sheet="Sheet1", header = TRUE)
