@@ -16,8 +16,8 @@ threshold=80
 set_current_directory()
 
 # load excel data 
-workbook <- loadWorkbook("storage.xlsx")
-#workbook <- loadWorkbook("storage_outliers.xlsx")
+# workbook <- loadWorkbook("storage.xlsx")
+workbook <- loadWorkbook("storage_outliers.xlsx")
 
 # load data
 xdata <- readWorksheet(workbook, sheet = "Sheet1", header = TRUE)
