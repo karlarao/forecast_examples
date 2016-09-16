@@ -16,7 +16,8 @@ threshold=80
 set_current_directory()
 
 # load excel data 
-workbook <- loadWorkbook("storage.xlsx")
+# workbook <- loadWorkbook("storage.xlsx")
+workbook <- loadWorkbook("storage_outliers.xlsx")
 
 # load data
 xdata <- readWorksheet(workbook, sheet = "Sheet1", header = TRUE)
@@ -43,7 +44,7 @@ saveWorkbook(workbook, file = "storage2.xlsx")
 
 # generate forecast
 # e <- ets(xdata3) 
-# e <- tslm(xdata3 ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
+# e <- rollmean(xdata3, k = 12, align = "right")
 # rma <- rollmean(xdata3, k = 12, align = "right")
 # e <- tslm(rma ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
 e <- tslm(xdata3 ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
@@ -82,4 +83,5 @@ legend("topleft",
        lty=c(0,1,2,2),  
        pt.cex=1, 
        cex=.5)
+
 
