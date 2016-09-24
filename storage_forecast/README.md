@@ -1,4 +1,13 @@
 
+
+#### Updated Graph with headroom expiry days
+<a href="https://raw.githubusercontent.com/karlarao/forecast_examples/master/storage_forecast/examples/headroom%20threshold%20with%20expiry%20days/80_percent.png" target="_blank">
+<img class="aligncenter" style="width: 600px;" src="https://raw.githubusercontent.com/karlarao/forecast_examples/master/storage_forecast/examples/headroom%20threshold%20with%20expiry%20days/80_percent.png" />
+</a>
+
+The idea behind the viz is shown below: 
+---
+
 #### Exponential smoothing (without outliers)
 This trend shows and additive trend on the data and the forecast (beyond the blue line) seems to be pretty robust.
 <a href="https://raw.githubusercontent.com/karlarao/forecast_examples/master/storage_forecast/examples/08_august_ets.png?raw=true" target="_blank">
@@ -22,3 +31,5 @@ Here's the forecast without the outliers.
 <a href="https://raw.githubusercontent.com/karlarao/forecast_examples/master/storage_forecast/examples/08d_august_robust_no_outliers.png?raw=true" target="_blank">
 <img class="aligncenter" style="width: 600px;" src="https://raw.githubusercontent.com/karlarao/forecast_examples/master/storage_forecast/examples/08d_august_robust_no_outliers.png?raw=true" />
 </a>
+
+
