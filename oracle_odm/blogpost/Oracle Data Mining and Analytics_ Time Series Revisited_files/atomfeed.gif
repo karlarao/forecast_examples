@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+	<title>Page not found | Oracle</title>	 
+	<meta name="Title" content="Page not found | Oracle">
+	<meta name="Description" content="We can't find the page you were looking for">
+	<meta name="robots" content="noindex, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+	<meta name="viewport" content="width=device-width">
+	<style>				body,html{padding:0;margin:0;background:#fff;font-size:0;border:0;height:100%;width:100%}
+		iframe{webkit-overflow-scrolling: touch; overflow: auto;position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;box-sizing:border-box;border:0;border-right:#dadee0 .6px solid}
+	</style>
+	</head>
+	<body class="f11 f11v4">
+		<div class="f11v4w1">
+			<div class="f11v4w2">		
+		<iframe id="notfoundpage" src=""></iframe>
+		
+		<noscript>
+			<iframe src="/404-error-page.html"></iframe>
+		</noscript>
+		</div>
+		</div>
+	</body>
+
+		<script type="text/javascript"> 
+	
+		var targetsrc  = '/LOCAL_DIR/404-error-page.html'; 	
+	
+		//set to file path using "LOCAL" as a placeholder for location directory
+		var defaultpg = '/404-error-page.html'; 		
+		// this should be the same as the noscript iframe src 
+
+		var white = ',tw,cn,ua,tr,se,si,sk,ru,md,ro,pt,br,pl,no,nl,be-nl,mn,lv,lt,kr,jp,it,hu,hr,il,fr,ch-fr,ca-fr,be-fr,fi,ve,uy,py,pr,pe,pa,ni,mx,lad,hn,gt,es,ec,cr,co,cl,bz,bo,ar,za,ye,vn,th,sn,sg,sa,rs,qa,pk,ph,om,nz,np,ng,my,mv,mt,middleeast,me,ma,lu,lk,lb,la,kw,kh,ke,jo,iq,in,il-en,ie,id,hk,gh,uk,emea,eg,ee,dz,cy,ca-en,bt,bn,bh,be,bd,ba,au,asiasouth,apac,africa,ae,gr,de,ch-de,at,dk,cz,bg,ye-ar,sa-ar,qa-ar,om-ar,middleeast-ar,lb-ar,kw-ar,jo-ar,iq-ar,eg-ar,bh-ar,ae-ar,';	
+		var local = (/oracle.com\/[^\/]+\//i.test(document.location.href)) ? document.location.href.split('oracle.com/')[1].split('/')[0] : '';
+	
+		targetsrc = (white.indexOf(','+local+',') > -1) ? targetsrc.replace(/LOCAL_DIR/,local) : defaultpg;
+
+		document.getElementById('notfoundpage').src = targetsrc;
+	
+		</script> 
+		
+<!-- Start SiteCatalyst code -->
+<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_error.js"></script>
+<!-- End SiteCatalyst code -->
+</html>
+			
+			

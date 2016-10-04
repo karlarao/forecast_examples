@@ -9,6 +9,9 @@ autoplot(as.ts(as.zoo(xdata)))
 xdata2 <- zoo(xdata$PASSENGERS,xdata$MONTH)
 xdata3 <- ts(xdata2)
 xdata4 <- ts(xdata2, frequency = 360/60)
+xdata4 <- decompose(xdata4)
+xdata4 <- xdata4$trend - xdata4$random
+plot(xdata4)
 
 e <- tslm(xdata3 ~ trend + I(trend^2) + I(sin(2*pi*trend/12)) + I(cos(2*pi*trend/12)))
 f <- forecast(e,h=length(xdata3), level=FALSE)

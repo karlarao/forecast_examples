@@ -1,0 +1,832 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" class="en ">
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Mobile Productivity Solutions | Employee Productivity Software</title>
+    <link href="http://www.sitrion.com/wp-content/themes/sitrion/img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="http://www.sitrion.com/xmlrpc.php">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
+    <link media="screen" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:600,400,300" rel="stylesheet">
+    <link media="screen" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/fonts/fonts.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/css/jquery.fancybox.css" rel="stylesheet">
+
+
+
+    <!--<link media="screen" type="text/css" href="http://dev.deux.de/sitrion/css/custom.css" rel="stylesheet">-->
+
+
+
+
+
+    
+    <script type="text/javascript" src="http://www.sitrion.com/wp-content/plugins/LIMZ/Dependencies/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="http://www.sitrion.com/wp-content/themes/sitrion/js/modernizr.js"></script>
+
+    <script type="text/javascript" src="http://www.sitrion.com/wp-content/themes/sitrion/js/pricingForm.js?v=2"></script>
+    <link media="screen" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/cssQuick/pricingForm.css?v=2" rel="stylesheet">
+    <link media="screen" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/cssQuick/quickCss.css?v=3" rel="stylesheet">
+
+    
+    <style>#menu-item-3974{display:none;}</style>
+    <meta name="description" content="Mobilize your entire enterprise workforce with Sitrion. Award-winning employee productivity solutions that make work better for everyone.
+
+" /><meta name="keywords" content="mobile enterprise, employee productivity, byod, increase productivity, secure, cloud,mobile, mobility, enterprise, productivity, software, workforce,  engagement, adoption
+" /><meta property="og:type" content="article"><meta property="og:title" content="Mobile Productivity Solutions | Employee Productivity Software"><meta property="og:image" content="http://www.sitrion.com/media/Template/defaultOgImage.jpg">
+    <link media="all" type="text/css" href="http://www.sitrion.com/wp-content/plugins/LIMZ/Styles/front/css/00all.css?v=7" rel="stylesheet"><script type="text/javascript" src="http://www.sitrion.com/wp-content/plugins/LIMZ/Dependencies/highlight/highlight.pack.js"></script><link media="all" type="text/css" href="http://www.sitrion.com/wp-content/plugins/LIMZ/Dependencies/highlight/styles/default.css" rel="stylesheet"><script type="text/javascript" src="http://www.sitrion.com/wp-content/plugins/LIMZ/JS/front_grunt.js?v=10"></script><script type="text/javascript" src="//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js"></script><!--[if IE 6 ]><link media="all" type="text/css" href="http://www.sitrion.com/wp-content/plugins/LIMZ/Styles/hacks/ie6.css" rel="stylesheet"><script type="text/javascript" src="http://www.sitrion.com/wp-content/plugins/LIMZ/Styles/hacks/resources/selectivizr-min.js"></script><![endif]--><script type="text/javascript">/* <![CDATA[ */
+                    var $ = jQuery;
+                    $(document).ready(function(){
+                        "use strict";
+                        window.limz = new window.Limz({"admin":false,"mainSiteId":1,"siteId":1,"plugin_url":"http:\/\/www.sitrion.com\/wp-content\/plugins\/LIMZ\/","media_url":"http:\/\/www.sitrion.com\/media\/","site_url":"http:\/\/www.sitrion.com\/","language":false,"postId":2,"postType":"page","permalink":"http:\/\/www.sitrion.com\/","pageSettings":{"basic":{"linkedFolder":""}},"noJsShareUrl":"http:\/\/www.sitrion.com\/nojssharing","snippets":{"general":{"sharingPopupHeadline":"Share this page","sharingPopupText":"Tell your colleagues and friends about Sitrion. Choose a social channel below to share this page.","shareThisPage":"Share this page","connectWithUs":"Connect with us","phoneNumber":"<span>1-877-748-7466<\/span><span class=\"limz_mob_hide limz_tab_hide\">&nbsp;(SITRION)<\/span>","phoneNumberLink":"+1-877-7487466","ourOffices":"Our Offices","searchResultsFor":"Search Results for","countryLanguage":"Site Language - English"},"languages":{"1":"English","2":"German","3":"Japanese"}},"cookieConsent":{"active":true,"useGeoTargeting":true,"urlPrivacyPage":"http:\/\/www.sitrion.com\/terms-and-privacy","snippets":{"callToAction":"Change your settings <span class=\"limz_a_icon icon-right\"><\/span>","labelSocialMedia":"Social Media","descriptionSocialMedia":"Facebook, Twitter and other social websites need to know who you are to work properly.","labelAnalytics":"Analytics","descriptionAnalytics":"We anonymously measure your use of this website to improve your experience.","labelEmbeddedMedia":"Embedded Media","descriptionEmbeddedMedia":"For example embedded YouTube videos, Google Maps, or Slide Share presentations use cookies.","labelStrictlyNecessary":"Strictly Necessary","descriptionStrictlyNecessary":"Some cookies on this website are strictly necessary. For example cookies that store your user preferences.","bannerHeadline":"We use cookies to ensure you get the best experience on our website.","bannerLinkToPrivacy":"Click here to read our user terms & privacy policy <span class=\"limz_a_icon icon-right\"><\/span>","settingsDescription":"Choose how this site uses cookies by checking or unchecking the boxes below:","buttonSave":"Save preferences","buttonSaveAndReload":"Save preferences and reload","buttonCancel":"Cancel","buttonClose":"Close"},"placeholders":{"defaultElement":{"message":"Here you should see a special site element. Your current privacy settings restrict the use of site elements that use cookies."},"pardot":{"message":"Here you should see a <b>contact form<\/b>. Your current privacy settings restrict the use of site elements that use cookies for <b>analytical purposes<\/b>."},"googleMaps":{"message":"Here you should see a <b>Google Map<\/b>. Your current privacy settings restrict the use of <b>embedded media<\/b> that uses cookies."},"sharing":{"message":"Here you should see some <b>social plugins<\/b> to share content. Your current privacy settings restrict the use of <b>social media<\/b> plugins that use cookies."},"youTube":{"message":"Here you should see a <b>YouTube Video<\/b>. Your current privacy settings restrict the use of <b>embedded media<\/b> plugins that use cookies."},"slideShare":{"message":"Here you should see a <b>slideshare presentation<\/b>. Your current privacy settings restrict the use of <b>embedded media<\/b> plugins that use cookies."},"smartRecruiters":{"message":"Here you should see a <b>listing of jobs<\/b> presented by a SmartRecruiters widget. Your current privacy settings restrict the use of site elements that use cookies for <b>analytical purposes<\/b>."}},"embedMaxMindScript":true}});
+                        limz.init();
+                     });
+                 /* ]]> */</script><link media="all" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/styles/basic/css/00all.css?v=15" rel="stylesheet"><link media="all" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/styles/one-dev/css/00all.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+        <link media="all" type="text/css" href="http://www.sitrion.com/wp-content/themes/sitrion/styles/ieSmaller9/ieSmaller9.css" rel="stylesheet">    <![endif]-->
+
+
+
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="google-site-verification" content="rtXlXWrRiqJ6uEhDvcTeYordE6vV7SRwG-qo925Y_H8" />
+<meta name="msvalidate.01" content="7944553974A0B564939DA0AC1F30A2B9" />
+<meta name="google-site-verification" content="amlr5htP8zijhCSFsuc1gANDTQX1F80FBWNQENvIanQ" />
+<meta name="bitly-verification" content="db695d76f90a"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Sitrion EN &raquo; Feed" href="http://www.sitrion.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="Sitrion EN &raquo; Comments Feed" href="http://www.sitrion.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Sitrion EN &raquo; Welcome Comments Feed" href="http://www.sitrion.com/welcome/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.sitrion.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='bbpress_post_ratings_Style-css'  href='http://www.sitrion.com/wp-content/plugins/bbpress-post-ratings/style.css?ver=4.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='bbp-default-css'  href='http://www.sitrion.com/wp-content/themes/sitrion/css/bbpress.css?ver=2.5.4-5380' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://www.sitrion.com/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=2.2.1' type='text/css' media='screen' />
+<script type='text/javascript' src='http://www.sitrion.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/bbpress-post-ratings/rating.js?ver=4.5.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_Confirm = {"are_you_sure":"Are you sure?"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/buddypress/bp-core/js/jquery-cookie.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/buddypress/bp-core/deprecated/js/jquery-scroll-to.min.js?ver=2.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all %d comments","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=2.2.1'></script>
+<link rel='https://api.w.org/' href='http://www.sitrion.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.sitrion.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.sitrion.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.5.3" />
+<link rel="canonical" href="http://www.sitrion.com/" />
+<link rel='shortlink' href='http://www.sitrion.com/' />
+<link rel="alternate" type="application/json+oembed" href="http://www.sitrion.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.sitrion.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.sitrion.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.sitrion.com%2F&#038;format=xml" />
+
+	<script type="text/javascript">var ajaxurl = 'http://www.sitrion.com/wp-admin/admin-ajax.php';</script>
+
+
+
+
+</head>
+<body class="home-page home page page-id-2 page-template page-template-template-headerImage page-template-template-headerImage-php no-js">
+
+
+
+<div id="bigHeader" class="teaserHome teaserWithVideo">
+    
+    <!--<div class="videoDummyWrapper">
+        <div class="videoDummy">
+
+        </div>
+    </div>-->
+
+
+        <div id="teaserVideo">
+            <video id="teaserVideoVideo" width="1920" height="834" poster="http://www.sitrion.com/media/Pages/Home/home-mainteaser.jpg" loop="loop"  autoplay="autoplay" preload="auto">
+                <source type="video/mp4" src="http://www.sitrion.com/media/Pages/Home/Video/home-mainteaser-one.mp4">
+                <source type="video/webm" src="http://www.sitrion.com/media/Pages/Home/Video/home-mainteaser-one.webm">
+                <source type="video/ogg" src="http://www.sitrion.com/media/Pages/Home/Video/home-mainteaser-one.ogv">
+                <img src="http://www.sitrion.com/media/Pages/Home/home-mainteaser.jpg" style="width:100%;"/>
+            </video>
+
+            <script>
+                $(document).ready(function(){
+                    var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent),
+                        ua = navigator.userAgent.toLowerCase(),
+                        android = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+
+
+
+                    if(iOS || android){
+                        var $button = $('<div id="videoStartButton" class="limz_shape_circle"><span class="fa fa-play"></span></div>'),
+                            $videoContainer = $('#teaserVideo'),
+                            $video = $('#teaserVideoVideo');
+
+                        $videoContainer.append($button);
+
+                        $button.on('click', function(){
+                            $video[0].play();
+                            $button.remove();
+                        });
+                    }
+                });
+
+            </script>
+
+        </div>
+    
+    
+    <div id="bigHeaderContent">
+        <div id="completeHeader">
+    <div id="headerPlaceholder"></div>
+    <header id="header_html5" class="noSub">
+        <div id="scrollPointHelper"></div>
+        <div class="background"></div>
+        <div class="mobileBackground"></div>
+        <div id="header" class="headerWrapper">
+
+
+
+            <div class="left container">
+                <div class="bottomContainer">
+                    <a id="logo" href="http://www.sitrion.com"></a>
+                </div>
+            </div>
+            <div class="center container">
+                <ul id="main_menu"><li><a href="http://www.sitrion.com/products/sitrion-one" title="Products"><div class="switchBlocker"></div><span class="boldFake">Products</span><span class="realLabel">Products</span></a><div class="sub-menu-container"><div class="sub-menu"><div class="sub-menuContainer"><div class="headerWrapper"><p>Award-winning mobile productivity solutions for the digital workplace</p><ul class=""><li><a href="http://www.sitrion.com/products/sitrion-one" title="Sitrion ONE"><div class="switchBlocker"></div><span class="boldFake">Sitrion ONE</span><span class="realLabel">Sitrion ONE</span></a><div class="menu_anchors"><a class="menu_anchor" href="/products/sitrion-one" title="Productivity Stream"><span>Productivity Stream</span><span class="icon-right"></span></a><a class="menu_anchor" href="/products/sitrion-one/efficiency-scenarios" title="Efficiency Scenarios"><span>Efficiency Scenarios</span><span class="icon-right"></span></a><a class="menu_anchor" href="/products/sitrion-one/smart-architecture" title="Smart Architecture"><span>Smart Architecture</span><span class="icon-right"></span></a><a class="menu_anchor" href="/products/sitrion-one/appbuilder" title="AppBuilder"><span>AppBuilder</span><span class="icon-right"></span></a></div></li><li><a href="http://www.sitrion.com/products/solutions" title="Solutions"><div class="switchBlocker"></div><span class="boldFake">Solutions</span><span class="realLabel">Solutions</span></a><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/products/solutions/social-intranet" title="Social Intranet"><span>Social Intranet</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/products/solutions/internal-communications" title="Internal Communications"><span>Internal Communications</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/products/solutions/hr-self-services" title="HR Self Services"><span>HR Self Services</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/products/solutions/boost-social-adoption-with-mobile" title="Boost Adoption with Mobile"><span>Boost Adoption with Mobile</span><span class="icon-right"></span></a></div></li><li><a href="http://www.sitrion.com/resources" title=""><div class="switchBlocker"></div><span class="boldFake">Resources</span><span class="realLabel">Resources</span></a><div class="menu_anchors"><a class="menu_anchor" href="/product-demos" title="Request Demo  "><span>Request Demo  </span><span class="icon-right"></span></a><a class="menu_anchor" href="/resources" title="On-Demand Webinars"><span>On-Demand Webinars</span><span class="icon-right"></span></a><a class="menu_anchor" href="/resources" title="Product Collateral"><span>Product Collateral</span><span class="icon-right"></span></a><a class="menu_anchor" href="/products/frequently-asked-questions" title="FAQs"><span>FAQs</span><span class="icon-right"></span></a></div></li></ul></div><div class="sub-menu-border sitrionBlueGreenGradient"></div></div></div></div></li><li><a href="http://www.sitrion.com/success" title="Success"><div class="switchBlocker"></div><span class="boldFake">Success</span><span class="realLabel">Success</span></a><div class="sub-menu-container"><div class="sub-menu"><div class="sub-menuContainer"><div class="headerWrapper"><p>Today 5 million people use Sitrion's award-winning solutions to make work better</p><ul class=""><li><a href="/success" title="Success"><div class="switchBlocker"></div><span class="boldFake">Success</span><span class="realLabel">Success</span></a><div class="menu_anchors"><a class="menu_anchor" href="/success" title="Success Stories"><span>Success Stories</span><span class="icon-right"></span></a></div></li><li><a href="http://www.sitrion.com/success/adoption" title="Adoption"><div class="switchBlocker"></div><span class="boldFake">Adoption</span><span class="realLabel">Adoption</span></a><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/success/adoption#people" title="People Engagement"><span>People Engagement</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/success/adoption#business" title="Business Alignment"><span>Business Alignment</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/success/adoption#technology" title="Technology Enablement"><span>Technology Enablement</span><span class="icon-right"></span></a></div><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/products/solutions/social-intranet/engagement-scorecard" title="Engagement Scorecard"><span>Engagement Scorecard</span><span class="icon-right"></span></a></div></li><li><a href="http://www.sitrion.com/success/partners" title="Partners"><div class="switchBlocker"></div><span class="boldFake">Partners</span><span class="realLabel">Partners</span></a><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/success/partners/business-implementation-partners" title="Business & Implementation"><span>Business & Implementation</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/success/partners/strategic-alliance-partners" title="Strategic Alliance"><span>Strategic Alliance</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/success/partners/technology-partners" title="Technology"><span>Technology</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/success/partners/partner-program" title="Sitrion Partner Program"><span>Sitrion Partner Program</span><span class="icon-right"></span></a></div></li><li><a href="http://www.sitrion.com/success/events-webinars/collective-365" title=""><div class="switchBlocker"></div><span class="boldFake">Events</span><span class="realLabel">Events</span></a><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/success/events-webinars/collective-365" title="Upcoming Events"><span>Upcoming Events</span><span class="icon-right"></span></a></div></li></ul></div><div class="sub-menu-border sitrionBlueGreenGradient"></div></div></div></div></li><li><a href="http://info.sitrion.com/one_test_drive_request" title=""><div class="switchBlocker"></div><span class="boldFake">Try it</span><span class="realLabel">Try it</span></a><div class="sub-menu-container"><div class="sub-menu"><div class="sub-menuContainer"><div class="headerWrapper"><p>One touch productivity on any mobile device</p><ul><li><a href="http://info.sitrion.com/one_test_drive_request" title=""><div class="switchBlocker"></div><span class="boldFake">Take a 30 day Test Drive</span><span class="realLabel">Take a 30 day Test Drive</span></a></li><li><a href="http://info.sitrion.com/one_mobile_demo_request" title=""><div class="switchBlocker"></div><span class="boldFake">Get a Personalized Demo</span><span class="realLabel">Get a Personalized Demo</span></a></li></ul></div><div class="sub-menu-border sitrionBlueGreenGradient"></div></div></div></div></li><li><a href="http://www.sitrion.com/resources" title="Resources"><div class="switchBlocker"></div><span class="boldFake">Resources</span><span class="realLabel">Resources</span></a><div class="sub-menu-container"><div class="sub-menu"><div class="sub-menuContainer"><div class="headerWrapper"><p>Sitrion ONE delivers 80% of mobile use cases out-of-the-box</p><ul><li><a href="http://www.sitrion.com/resources" title="Resources"><div class="switchBlocker"></div><span class="boldFake">Resources Library</span><span class="realLabel">Resources Library</span></a><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/resources#eBooksAndWhitePapers" title="eBooks & White Papers"><span>eBooks & White Papers</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/resources#onDemandWebinars" title="On-Demand Webinars"><span>On-Demand Webinars</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/resources#videosAndTestimonials" title="Videos & Testimonials"><span>Videos & Testimonials</span><span class="icon-right"></span></a></div><div class="menu_anchors"><a class="menu_anchor" href="/products/frequently-asked-questions" title="FAQs"><span>FAQs</span><span class="icon-right"></span></a></div></li><li><a href="http://www.sitrion.com/resources/support" title=""><div class="switchBlocker"></div><span class="boldFake">Support</span><span class="realLabel">Support</span></a><div class="menu_anchors"><a class="menu_anchor" href="http://www.sitrion.com/resources/support/get-help" title="Get Help"><span>Get Help</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/resources/support/release-updates/sitrion-one" title="Release Updates"><span>Release Updates</span><span class="icon-right"></span></a><a class="menu_anchor" href="http://www.sitrion.com/resources/support/documentation" title="Documentation"><span>Documentation</span><span class="icon-right"></span></a><a class="menu_anchor" href="https://engage.sitrion.com/register" title="Engage Community" target="_blank"><span>Engage Community</span><span class="icon-right"></span></a></div></li></ul></div><div class="sub-menu-border sitrionBlueGreenGradient"></div></div></div></div></li><li><a href="http://www.sitrion.com/blog" title="Blog"><div class="switchBlocker"></div><span class="boldFake">Blog</span><span class="realLabel">Blog</span></a><div class="sub-menu-container"><div class="sub-menu"><div class="sub-menuContainer"><div class="headerWrapper"><p>&nbsp;</p><ul class="right"><li><a href="/blog" title="Blog"><div class="switchBlocker"></div><span class="boldFake">Blog</span><span class="realLabel">Blog</span></a></li><li><a href="http://www.sitrion.com/blog/danielkraft" title="Daniel Kraft"><div class="switchBlocker"></div><span class="boldFake">Daniel Kraft</span><span class="realLabel">Daniel Kraft</span></a></li></ul></div><div class="sub-menu-border sitrionBlueGreenGradient"></div></div></div></div></li><li><a href="http://www.sitrion.com/about" title="About"><div class="switchBlocker"></div><span class="boldFake">About</span><span class="realLabel">About</span></a><div class="sub-menu-container"><div class="sub-menu"><div class="sub-menuContainer"><div class="headerWrapper"><p>&nbsp;</p><ul class="right"><li><a href="/about" title="About"><div class="switchBlocker"></div><span class="boldFake">About</span><span class="realLabel">About</span></a></li><li><a href="http://www.sitrion.com/about/space" title="SP^CE"><div class="switchBlocker"></div><span class="boldFake">SP^CE</span><span class="realLabel">SP^CE</span></a></li><li><a href="http://www.sitrion.com/about/team" title="Team"><div class="switchBlocker"></div><span class="boldFake">Team</span><span class="realLabel">Team</span></a></li><li><a href="http://www.sitrion.com/about/careers" title="Careers"><div class="switchBlocker"></div><span class="boldFake">Careers</span><span class="realLabel">Careers</span></a></li><li><a href="http://www.sitrion.com/about/contact" title="Contact"><div class="switchBlocker"></div><span class="boldFake">Contact</span><span class="realLabel">Contact</span></a></li></ul></div><div class="sub-menu-border sitrionBlueGreenGradient"></div></div></div></div></li></ul>            </div>
+            <div class="right container">
+                <div class="bottomContainer">
+                    <div class="socialIcons">
+
+                        <a href="https://twitter.com/sitrion" title="Twitter" target="_blank"><span class="icon-circleTwitter"></span></a>
+                        <a href="https://www.facebook.com/sitrion" title="Facebook" target="_blank"><span class="icon-circleFacebook"></span></a>
+                        <a href="https://www.linkedin.com/company/sitrion" title="LinkedIn" target="_blank"><span class="icon-circleLinkedIn"></span></a>
+                        <a href="https://www.youtube.com/user/sitrionvideo"  title="YouTube" target="_blank"><span class="icon-circleYouTube"></span></a>
+
+                                                <a href="https://engage.sitrion.com/register" title="Engage" target="_blank" class="header-engage-icon">
+                            <img src='http://www.sitrion.com/wp-content/themes/sitrion/img/engage-bubble2.svg' alt="" title="Customer Community" />
+                        </a>
+                    </div>
+                    <div id="menu_mobileButton">
+                        <div class="top sitrionBlueGreenGradient"></div>
+                        <div class="middle  sitrionBlueGreenGradient"></div>
+                        <div class="bottom  sitrionBlueGreenGradient"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="menuMobileContainer">
+            <ul id="menuMobile">
+            </ul>
+        </div>
+        <div class="sub-menu-border sitrionBlueGreenGradient"></div>
+    </header>
+
+    
+</div>
+
+
+
+
+        <div class="sitrion_content headerTeaser teaserHome teaserWithVideo">
+            <div class=" limz" data-limz-config="{'block':{'postId':2,'field':'limz_header','label':'Header','forbiddenModules':['Sidebar'],'linkedFolder':'','allowedWidgets':['Tiles','Jobs']}}"><div class="limz_module limz_module_largeWidth_fromTab limz_module_ColumnsTwo limz_mt_desk_4em" id="">
+
+    <div class="limz_editor limz_editor_alignCenter limz_mt_desk_0 limz_editor_indent_10p"><h1 id=""><a href="/products" id="">ONE employee app</a></h1>
+
+<h2 class="limz_mt_desk_0_5em limz_font_openSans fontSize_h5" id="">The <a href="http://pantheon-dev.sitrion.com/blog/sitrion-wins-2015-enterprise-mobility-award-with-sitrion-one">award-winning</a> mobile solution<br>
+for your entire workforce</h2>
+<a class="limz_button in_content_button white WidthS hide-on-smartphone hide-on-tablet limz_ga" data-limz-ga="{'label':'MainTeaser: Learn More'}" href="/products/sitrion-one"><span class="limz_button_icon icon-arrowRight-prepended fa fa-angle-right"></span>Learn more &nbsp; &nbsp;</a>&nbsp; &nbsp; <a class="limz_button in_content_button white WidthS limz_ga" data-limz-ga="{'label':'MainTeaser: Testdrive'}" href="http://info.sitrion.com/one_test_drive_request"><span class="limz_button_icon icon-arrowRight-prepended fa fa-angle-right"></span>Try it now</a>
+
+<ul class="home-mainteaser-awards hide-on-smartphone hide-on-tablet">
+	<li class="award-mobility"><a href="http://www.sitrion.com/blog/sitrion-wins-2015-enterprise-mobility-award-with-sitrion-one" target="_blank"><img alt="" src="http://sitrion.com/media/Pages/Home/award-mobility.png"> </a></li>
+	<li class="award-innovation-trophee"><a href="http://www.sitrion.com/blog/sitrion-one-wins-2016-it-innovation-award" target="_blank"><img alt="" src="http://sitrion.com/media/Pages/Home/award-innovation-trophee.png"> </a></li>
+	<li class="award-soc"><a href="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination" target="_blank"><img alt="" src="http://sitrion.com/media/Pages/Home/award-soc.png"> </a></li>
+</ul>
+</div>
+
+
+</div></div>        </div>
+    </div>
+
+    <img id="headerBGImageMobile" src="http://www.sitrion.com/media/Pages/Home/home-mainteaser-one-mobile.jpg" />
+
+        
+</div>
+
+
+
+
+
+
+
+
+
+<div id="content" class="sitrion_content"><div class=" limz" data-limz-config="{'block':{'postId':2,'field':'limz_content','label':'Content','forbiddenModules':['Sidebar'],'linkedFolder':'','allowedWidgets':['Tiles','Jobs']}}"><div class="limz_module limz_editor_alignCenter limz_module_addContainers limz_module_fullWidth second-box-wrapper" data-limz-module-type="AddContainers">
+    <h2 class="fontSize_h2 home-second-box-headline">Reach and engage your global workforce with one powerful employee app</h2>
+
+
+
+
+    <ul class="use-case-list">
+        <li class="use-case-wrapper use-case-wrapper-1">
+            <h3 class="use-case-headline">Employee<br> communications</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-1.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-2">
+            <h3 class="use-case-headline">News, alerts <br>&amp; notifications</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-alerts.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-3">
+            <h3 class="use-case-headline">Approvals &amp; <br>confirmations</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-aprovals.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-4">
+            <h3 class="use-case-headline">Time <br>management</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-time-management.png" alt="">
+        </li>
+        <li class="use-case-connector">
+            <img src="http://sitrion.com/media/Pages/Home/use-case-connector.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-5">
+            <h3 class="use-case-headline">Shared <br>documents</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-shared-documents.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-6">
+            <h3 class="use-case-headline">Ideas &amp; <br>surveys</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-ideas.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-7-mobile">
+            <h3 class="use-case-headline">Time <br>management</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-time-management.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-7">
+            <h3 class="use-case-headline">Expert <br>search</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-expert-search.png" alt="">
+        </li>
+        <li class="use-case-wrapper use-case-wrapper-8">
+            <h3 class="use-case-headline">Employee <br>advocacy</h3>
+            <img class="use-case-img" src="http://sitrion.com/media/Pages/Home/use-case-employee.png" alt="">
+        </li>
+        <div class="clear"></div>
+    </ul>
+
+    <div class="txt-systems">
+        <span>Works with the systems you have &nbsp;</span>
+        <img src="http://sitrion.com/media/Pages/Home/one-app-icon.png">
+        <span style="">&nbsp; or as a standalone mobile app.</span>
+    </div>
+
+
+    <ul class="backend-systems-list">
+        <li class="backend-system-wrapper backend-system-wrapper-1">
+            <img class="backend-system-img" src="http://sitrion.com/media/Pages/Home/sitrion-conectivity-microsoft.png" alt="">
+            <strong class="backend-system-headline">Microsoft</strong>
+        </li>
+        <li class="backend-system-wrapper backend-system-wrapper-2">
+            <img class="backend-system-img" src="http://sitrion.com/media/Pages/Home/sitrion-conectivity-salesforce.png" alt="">
+            <strong class="backend-system-headline">Salesforce</strong>
+        </li>
+        <!--<li class="backend-systems-connector backend-system-wrapper">
+            <img class="backend-system-img" src="http://pantheon-dev.sitrion.com/media/Pages/Home/backend-systems-connector.png" alt="">
+        </li>-->
+        <li class="backend-system-wrapper backend-system-wrapper-3">
+            <span class="connector-backend-use-case">&nbsp;</span>
+            <img class="backend-system-connector" src="http://sitrion.com/media/Pages/Home/backend-systems-connector.png" alt="">
+            <img class="backend-system-img" src="http://sitrion.com/media/Pages/Home/sitrion-conectivity-oracle.png" alt="">
+            <strong class="backend-system-headline">Oracle</strong>
+        </li>
+        <li class="backend-system-wrapper backend-system-wrapper-4">
+            <img class="backend-system-img" src="http://sitrion.com/media/Pages/Home/sitrion-conectivity-sap.png" alt="">
+            <strong class="backend-system-headline">SAP</strong>
+        </li>
+        <li class="backend-system-wrapper backend-system-wrapper-5">
+            <img class="backend-system-img" src="http://sitrion.com/media/Pages/Home/sitrion-conectivity-onecloud.png" alt="">
+            <strong class="backend-system-headline">ONE Cloud</strong>
+        </li>
+        <div class="clear"></div>
+    </ul>
+    <div class="clear"></div>
+
+
+
+
+
+    <a href="http://www.sitrion.com/products/sitrion-one" class="limz_button in_content_button ui-link Width_DeskM_TabL"><span class="limz_button_icon icon-arrowRight-prepended fa fa-angle-right"></span><span class="limz_editor">Learn how it works</span> </a>
+</div><div class="limz_module limz_module_full_width_bar limz_mt_desk_0 no-margin" data-limz-module-type="Linear">
+    <a data-limz-config="{'objectReference':'sitrion.linkContainer'}" id="" target="_blank" href="http://info.sitrion.com/one_test_drive_request" class="limz_container limz_module_full_width_bar_content ui-link">
+        <h4 class="limz_editor limz_editor_alignCenter">Try the award-winning ONE employee app now</h4>
+        <p class="limz_editor limz_editor_alignCenter subheadline limz_mt_desk_0">Click here for a free 30 day test drive of Sitrion ONE</p>
+        <div class="limz_editor limz_editor_alignCenter cta"><span class="limz_button btn-cta">Start my free 30-day test drive</span></div>
+    </a>
+</div><div class="limz_module limz_mt_desk_3em" data-limz-module-type="Headline">
+    <div class="limz_editor limz_editor_alignCenter"><h3 class="fontSize_h2" id="">Trusted by these global brands:</h3>
+</div>
+</div>
+<div class="limz_module limz_module_addContainers limz_mt_desk_0 limz_pt_desk_0 limz_pb_desk_0 limz_module_fullWidth" data-limz-module-type="AddContainers" style="background-image: url(http://www.sitrion.com/);">
+    <div class="limz_container limz_addContainer limz_sortableList limz_module_preset_imageText_6_centered widthAuto" id="">
+        <div class="limz_container limz_sortable" data-limz-config="{'moduleReference':'imageText'}" id="">
+            <img class="limz_image" src="http://www.sitrion.com/media/Pages/Home/ClientLogos/ref2-ingbank.png" alt="ING Bank" id="">
+            <div class="limz_editor"></div>
+        </div>
+        <div class="limz_container limz_sortable" data-limz-config="{'moduleReference':'image'}">
+            <img class="limz_image" src="http://www.sitrion.com/media/Pages/Home/ClientLogos/ref2-mercer.png" alt="Mercer" id="">
+        </div>
+        <div class="limz_container limz_sortable" data-limz-config="{'moduleReference':'image'}">
+            <img class="limz_image" src="http://www.sitrion.com/media/Pages/Home/ClientLogos/ref2-pg.png" alt="P&amp;G" id="">
+        </div>
+        <div class="limz_container limz_sortable hide-on-smartphone" data-limz-config="{'moduleReference':'image'}">
+            <img class="limz_image" src="http://www.sitrion.com/media/Pages/Home/ClientLogos/ref2-mastercard.png" alt="Mastercard" id="">
+        </div>
+        <div class="limz_container limz_sortable hide-on-smartphone hide-on-tablet" data-limz-config="{'moduleReference':'image'}" id="">
+            <img class="limz_image" src="http://www.sitrion.com/media/Pages/Home/ClientLogos/ref2-merck.png" alt="Merck" id="">
+        </div>
+        <div class="limz_container limz_sortable hide-on-smartphone hide-on-tablet" data-limz-config="{'moduleReference':'image'}">
+            <img class="limz_image" src="http://www.sitrion.com/media/Pages/Home/ClientLogos/ref2-airbus.png" alt="Airbus" id="">
+        </div>
+    </div>
+
+</div>
+
+
+<div class="limz_module limz_mt_desk_0" data-limz-module-type="Linear">
+    <div class="limz_editor limz_editor_alignCenter limz_mt_desk_0"><p class="home-intro" id="">At Sitrion, we make work better. We take the complexity out of today’s world of work with award-winning, mobile productivity solutions that help millions of employees globally be more connected and productive.<br>
+<a href="/products/sitrion-one">Learn more.</a></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="limz_widget limz_mt_desk_3em" data-limz-widget="{'name':'Tiles','siteId':1}" id="">
+    
+    <div class="limz_module limz_module_tiles sitrion_tiles limz_mt_desk_0" data-limz-module-type="Tiles" id="">
+    <div class="limz_column limz_column_1_of_4">
+        <div class="limz_tile limz_container tile_tall limz_first" style="background-color: rgb(148, 190, 21);" data-limz-config="{'moduleReference':'tallTile'}">
+            <div class="limz_sizer"></div>
+            <div style="left: 0px;" class="limz_content" id="">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Security, Trust &amp; Confidence</span>
+                    <a class="" target="_blank" href="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination">
+                        <img class="limz_image limz_mt_desk_0" src="http://www.sitrion.com/media/Pages/Home/soc2-aicpa-compliant-service-organization-logo-small.jpg" id="">
+                    </a>
+                    <a class="" target="_blank" href="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination">
+                    </a>
+                    <div class="tile_text limz_editor limz_mt_desk_0" data-limz-config="{'editor':{'type':'input'}}" id=""><a class="" target="_blank" href="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination">Sitrion is a SaaS SOC 2 compliant service organization. That means you're in great hands. <br>
+                    </a>
+                    </div>
+                    <a class="" target="_blank" href="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination">
+
+                    </a>
+                    <a data-limz-share-summary="Sitrion is a SaaS SOC 2 compliant service organisation." data-limz-share-url="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination" data-limz-share-title="Sitrion is a SaaS SOC 2 compliant service organisation." id="" target="_blank" href="http://www.sitrion.com/blog/sitrion-successfully-completes-soc-2-examination" class="limz_shareButton tile_share icon-share"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="limz_tile limz_container tile_small tile_heading_dark" style="background-color: rgb(246, 150, 35);" data-limz-config="{'moduleReference':'smallTile'}">
+            <div class="limz_sizer"></div>
+            <div class="limz_content">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Blog:</span>
+                    <div class="limz_customFunction" data-limz-function-name="limz_customFunction_lastBlogPost" data-limz-setting-manager="{'field':'limz_lastBlogPostTile','snippet':'overwriteLastBlogPostTile','postId':5455}"><a class="tileLastBlogPostImageLink" target="_blank" href="http://www.sitrion.com/blog/the-desktop-is-dead-he-just-doesnt-know-it-yet"><img class="limz_image" src="http://www.sitrion.com/media/Blog/2016/September/Graph A.png"></a><a class="tileLastBlogPostImageLink" target="_blank" href="http://www.sitrion.com/blog/the-desktop-is-dead-he-just-doesnt-know-it-yet"><div class="tile_text limz_editor_pseudo limz_mt_desk_0">Sitrion Blog: The desktop is dead, he just doesn’t...</div></a><a
+        class="limz_shareButton tile_share icon-share"
+        data-limz-share-summary="ComScore has just released “The 2016 U.S. Mobile App Report,” and while there is a ton of good data in it, one thing was very interesting to me: People spend less time on desktops consuming digital media. Just to be clear... "
+        data-limz-share-url="http://www.sitrion.com/blog/the-desktop-is-dead-he-just-doesnt-know-it-yet"
+        data-limz-share-title="The desktop is dead, he just doesn’t know it, yet"
+        target="_blank"
+        href="">
+
+        </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="limz_column limz_column_1_of_4">
+        <div class="limz_tile limz_container tile_small limz_first tile_textBack_green" style="background-color: rgba(105, 168, 51, 0.1);" data-limz-config="{'moduleReference':'smallTile'}">
+            <div class="limz_sizer"></div>
+            <div class="limz_content">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Awards:</span>
+                    <a class="" target="_blank" href="http://www.sitrion.com/blog/sitrion-one-wins-2016-it-innovation-award">
+                        <img class="limz_image limz_mt_desk_0" src="http://www.sitrion.com/media/Pages/Home/it-innovation-award-2016.jpg" id="">
+                    </a>
+                    <a class="" target="_blank" href="http://www.sitrion.com/blog/sitrion-one-wins-2016-it-innovation-award">
+                        <div class="tile_text limz_editor limz_mt_desk_0" data-limz-config="{'editor':{'type':'input'}}" id="">Sitrion ONE wins IT Innovation Award 2016<span data-limz-target="_blank" data-limz-href="http://info.sitrion.com/avoid-same-hr-tech-mistakes" class="limz_linkFake">.&nbsp;</span>
+                        </div>
+                    </a>
+                    <a data-limz-share-summary="Sitrion ONE wins IT Innovation Award 2016. #sitrion" data-limz-share-url="http://www.sitrion.com/blog/sitrion-one-wins-2016-it-innovation-award" data-limz-share-title="Sitrion ONE wins IT Innovation Award 2016." id="" target="_blank" href="http://www.sitrion.com/blog/sitrion-one-wins-2016-it-innovation-award" class="limz_shareButton tile_share icon-share"></a>
+                </div>
+            </div>
+        </div>
+        <div class="limz_tile limz_container tile_tall hide-on-smartphone" style="background-color: rgb(45, 132, 146);" data-limz-config="{'moduleReference':'tallTile'}">
+            <div class="limz_sizer"></div>
+            <div class="limz_content" style="left: 0px;" id="">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Sitrion ONE</span>
+                    <a class="" href="http://www.sitrion.com/blog/sitrion-wins-2015-enterprise-mobility-award-with-sitrion-one">
+                        <img class="limz_image limz_mt_desk_0" src="http://www.sitrion.com/media/Pages/Home/enterprise-mobility-2015-award-workforce-mobility.gif" id="">
+                    </a>
+                    <a class="" href="http://www.sitrion.com/blog/sitrion-wins-2015-enterprise-mobility-award-with-sitrion-one">
+                        <div class="tile_text limz_editor limz_mt_desk_0" data-limz-config="{'editor':{'type':'input'}}" id="">Enterprise Mobility Award 2015 Winner for Workforce Mobility.
+                            <br>
+                        </div>
+                    </a>
+                    <a data-limz-share-summary="Sitrion is Enterprise Mobility Award Winner 2016 #sitrion" data-limz-share-url="http://www.sitrion.com/blog/sitrion-wins-2015-enterprise-mobility-award-with-sitrion-one" data-limz-share-title="Sitrion is Enterprise Mobility Award Winner 2016 #sitrion" id="" target="_blank" href="http://www.sitrion.com/blog/sitrion-wins-2015-enterprise-mobility-award-with-sitrion-one" class="limz_shareButton tile_share icon-share"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="limz_column limz_column_2_of_4 limz_last hide-on-smartphone">
+        <div class="limz_tile limz_container tile_large limz_first tile_textBack_green tile_heading_dark" style="background-color: rgba(105, 168, 51, 0.1);" data-limz-config="{'moduleReference':'largeTile'}">
+            <div class="limz_sizer"></div>
+            <div class="limz_content">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Award-winning Employee App:</span>
+                    <a class="" href="http://www.sitrion.com/products/sitrion-one">
+                        <img class="limz_image limz_mt_desk_0" src="http://www.sitrion.com/media/teaser-solutions2.jpg" id="">
+                    </a>
+                    <a class="" href="http://www.sitrion.com/products/sitrion-one">
+                        <div class="tile_text limz_editor limz_mt_desk_0" data-limz-config="{'editor':{'type':'input'}}" id="">Mobilize daily tasks &amp; workflows across the Microsoft &amp; SAP ecosystems.&nbsp;
+                        </div>
+                    </a>
+                    <a data-limz-share-url="http://www.sitrion.com/products/sitrion-one" data-limz-share-summary="Mobility solutions that help millions of employees globally." data-limz-share-title="Mobilize simple, daily tasks across the Microsoft &amp; SAP ecosystems" id="" target="_blank" href="http://www.sitrion.com/nojssharing?title=Simplify%20your%20HR%20processes%20across%20the%20Microsoft%20and%20SAP%20ecosystems.%20&amp;url=http%3A%2F%2Fwww.sitrion.com%2Fproducts%2Fsolutions&amp;summary=Social%20%26%20Process%20solutions%20that%20help%20millions%20of%20employees%20globally." class="limz_shareButton tile_share icon-share"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="limz_column limz_column_1_of_4 hide-on-smartphone hide-on-tablet">
+        <div class="limz_tile limz_container tile_small" style="background-color: rgba(246, 150, 35, 0.1);" data-limz-config="{'moduleReference':'smallTile'}">
+            <div class="limz_sizer"></div>
+            <div class="limz_content">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Success:</span>
+                    <a class="" href="/success/mastercard">
+                        <img class="limz_image limz_mt_desk_0" src="http://www.sitrion.com/media/Pages/Home/Tiles/susan2.png" alt="Mastercards Susan Warner" id="">
+                    </a>
+                    <a class="" href="http://www.sitrion.com/success/mastercard">
+                        <div class="tile_text limz_editor limz_mt_desk_0" data-limz-config="{'editor':{'type':'input'}}">Learn how Sitrion helps MasterCard to connect better.
+                            <br>
+                        </div>
+                    </a>
+                    <a data-limz-share-summary="Watch these informative videos to learn more about how MasterCard is succeeding with Sitrion and SharePoint." data-limz-share-url="http://www.sitrion.com/success/mastercard" data-limz-share-title="MasterCard uses Sitrion to connect their global workforce" target="_blank" href="http://www.sitrion.com/nojssharing?title=MasterCard%20uses%20Sitrion%20to%20connect%20their%20global%20workforce&amp;url=http%3A%2F%2Fwww.sitrion.com%2Fsuccess%2Fmastercard&amp;summary=Watch%20these%20informative%20videos%20to%20learn%20more%20about%20how%20MasterCard%20is%20succeeding%20with%20Sitrion%20and%20SharePoint." class="limz_shareButton tile_share icon-share"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="limz_column limz_column_1_of_4 limz_last hide-on-smartphone hide-on-tablet">
+        <div class="limz_tile limz_container tile_small" style="background-color: rgb(246, 150, 35);" data-limz-config="{'moduleReference':'smallTile'}">
+            <div class="limz_sizer"></div>
+            <div style="left: 0px;" class="limz_content" id="">
+                <div class="tile_content"><span class="tile_info limz_editor" data-limz-config="{'editor':{'type':'input'}}" id="">Video:</span>
+                    <a class="" target="_blank" href="https://www.youtube.com/watch?v=I6kovEVidMU">
+                        <img class="limz_image limz_image_center limz_mt_desk_0" src="http://www.sitrion.com/media/mobile-productivity-in-20-seconds.JPG" id="">
+                    </a>
+                    <a class="" target="_blank" href="https://www.youtube.com/watch?v=I6kovEVidMU">
+                        <div class="tile_text limz_editor limz_mt_desk_0" data-limz-config="{'editor':{'type':'input'}}" id="">ONE employee app for your entire global workforce.<br>
+                        </div>
+                    </a>
+                    <a data-limz-share-url="https://www.youtube.com/watch?v=I6kovEVidMU" data-limz-share-summary="Mobile for Everyone: Be Productive in 20 seconds with #sitrion." data-limz-share-title="Mobile for Everyone: Be Productive in 20 seconds with #sitrion" id="" target="_blank" href="https://www.youtube.com/watch?v=I6kovEVidMU" class="limz_shareButton tile_share icon-share"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="limz_module limz_mt_desk_1em">
+    <div class="limz_editor limz_editor_alignCenter"><a class="limz_button in_content_button ui-link Width_DeskM_TabL" href="/blog"><span class="limz_button_icon icon-arrowRight-prepended fa fa-angle-right"></span><span class="limz_editor" id="">Get inspired. Read our mobile blog</span> </a> &nbsp; &nbsp; <a class="limz_button in_content_button ui-link Width_DeskM_TabL" href="/resources"><span class="limz_button_icon icon-arrowRight-prepended fa fa-angle-right"></span><span class="limz_editor">Supercharge your enterprise mobile strategy!</span> </a></div>
+</div></div><div class="limz_fontSize_master_small limz" id="closure" data-limz-config="{'block':{'postId':2,'field':'limz_closure','label':'Closure','id':'closure','classes':'limz_fontSize_master_small','addModules':true,'linkedFolder':'','forbiddenModules':['Sidebar'],'allowedWidgets':['Closure','More Information']}}"></div></div>
+
+<footer id="footer">
+	<div class="footer-inner">
+		<div class="left container">
+			<img src='http://www.sitrion.com/wp-content/themes/sitrion/img/sitrion_footer_logo.png' class="footer-logo" alt="Sitrion - Logo"/>
+			<p>&copy; 2016 • All rights reserved </p>			
+			
+		</div>
+		<div class="center container">
+			<div class="menu-footer-menu-top-container"><ul id="footer_menu_top" class="menu"><li id="menu-item-4026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4026"><a href="http://www.sitrion.com/products">Products</a></li>
+<li id="menu-item-4027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4027"><a href="http://www.sitrion.com/success">Success</a></li>
+<li id="menu-item-4030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4030"><a title="Demo" href="http://www.sitrion.com/product-demos">Try it</a></li>
+<li id="menu-item-5063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5063"><a href="http://www.sitrion.com/resources">Resources</a></li>
+<li id="menu-item-4029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4029"><a href="http://www.sitrion.com/blog">Blog</a></li>
+<li id="menu-item-4049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4049"><a href="http://www.sitrion.com/about">About</a></li>
+</ul></div>
+            <div class="limz_inline-block">
+                <div id="footer_languageSwitcher" class="limz_dialog_parent">
+                    <div class="link">
+                        <span class="icon-globe"></span><span class="language">Site Language - English</span><span class="icon-upFull"></span>
+                    </div>
+                    <div class="limz_dialog">
+                        <div class="limz_dialog_content">
+                            <a href="http://www.sitrion.com/">English Site</a><a href="http://www.sitrion.de/">German Site</a><a href="http://www.sitrion.jp/">Japanese Site</a>                        </div>
+                    </div>
+                </div>
+                <div class="menu-footer-menu-meta-container"><ul id="footer_menu_meta" class="menu"><li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310"><a href="http://www.sitrion.com/terms-and-privacy">Terms &amp; Privacy</a></li>
+<li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="http://www.sitrion.com/sitemap">Sitemap</a></li>
+</ul></div>            </div>
+		</div>
+		<div class="right container">
+			<ul class="footer-socials">
+				<li><a href="https://twitter.com/sitrion" title="Twitter" target="_blank"><span class="icon-circleTwitter"></span></a></li>
+				<li><a href="https://www.facebook.com/sitrion" title="Facebook" target="_blank"><span class="icon-circleFacebook"></span></a></li>
+				<li><a href="https://www.linkedin.com/company/sitrion" title="LinkedIn" target="_blank"><span class="icon-circleLinkedIn"></span></a></li>
+				<li><a href="https://www.youtube.com/user/sitrionvideo" title="YouTube" target="_blank"><span class="icon-circleYouTube"></span></a></li>
+				<li>
+                    <a class="footer-engage-logo" href="https://engage.sitrion.com/register" title="Engage" target="_blank">
+                            <img src='http://www.sitrion.com/wp-content/themes/sitrion/img/footer-engage-icon.png' class="" alt="Engage"/>
+                    </a>
+                </li>
+			</ul>
+			<a href="#top" class="footer-back-to-top">Back to top</a>
+			
+			
+			
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+</footer>
+
+
+
+
+
+<div id="sitrion_popup_sharing">
+    <div class="sitrion_popup_mask"></div>
+    <div class="sitrion_popup_box">
+        <div class="sitrion_popup_header">
+            Share this page<div class="sitrion_popup_cancel">X</div>
+        </div>
+        <div class="sitrion_popup_content">
+            <div class="sitrion_popup_text">Tell your colleagues and friends about Sitrion. Choose a social channel below to share this page.</div>
+            
+
+    <div class="sitrion_sharing_buttons">
+        
+        <div class="sitrion_sharing_button" style="width:107px;">
+            <a href="https://twitter.com/sitrion" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @sitrion</a>
+        </div>
+        
+        <div class="sitrion_sharing_button sitrion_sharing_twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="sitrion" data-url="http://www.sitrion.com/" data-lang="en"></a>
+        </div>
+        <div class="sitrion_sharing_button">
+            <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+        </div>
+        <div class="sitrion_sharing_button">
+            <div class="fb-share-button" data-href="http://www.sitrion.com/" data-type="button_count"></div>
+        </div>
+        <div class="sitrion_sharing_button">
+            <script type="IN/Share" data-counter="right" data-showzero="true"></script>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .sitrion_sharing_buttons{padding:1.5em;}
+    .sitrion_sharing_button{display:inline-block;padding:0.5em;height:20px;min-width:1px;}
+    .sitrion_sharing_button *{float:left !important;}
+
+    .sitrion_sharing_twitter{width:80px;}
+    .fb-share-button span{float:left;}
+</style>
+
+
+        <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+        window.___gcfg = {lang: 'en'};
+
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
+
+
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=212659325574227";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-N545WQ" height = "0" width = "0" style = "display:none;visibility:hidden" > </iframe>
+</noscript>
+
+<script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N545WQ');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- start number replacer -->
+<script type = "text/javascript">
+    vs_account_id = "CtjSZlJoGcs5egAk";
+</script>
+
+
+
+<script type="text/javascript" src="http://www.sitrion.com/wp-content/themes/sitrion/js/footer/00all.js"></script>
+<script type="text/javascript" src="http://www.sitrion.com/wp-content/themes/sitrion/js/jquery.fancybox.pack.js"></script>
+
+<script>
+    
+    
+    
+    $(document).ready(function(){
+    	
+        
+        var body = $('body'),
+            $videoTriggers = $('.videoTrigger');
+
+        if(window.limz.responsive.getResponsiveId() === 'mob'){
+            $videoTriggers.each(function(){
+                var $button = $(this),
+                    $video = $button.parents('.videoDevice').find('video'),
+                    $container = $button.parents('.videoDevice'),
+                    video = $video[0];
+
+                $container.on('click', function(){
+                    if(video.paused){
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+
+                });
+
+            })
+        }
+
+        $videoTriggers.on('click', function(event){
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            var $button = $(this),
+                $video = $button.parents('.videoDevice').find('video'),
+                $container = $button.parents('.videoDevice'),
+                video = $video[0];
+
+            $button.hide();
+
+            video.play();
+
+            video.addEventListener('ended', function(){
+                $button.show();
+            }, false);
+
+            $container.on('click', function(){
+                video.pause();
+                $button.show();
+            });
+
+        });
+
+        function setInfoBoxListener(){
+            body.on('mouseenter.limzInfoBox', '.limz_infoBox_trigger', function(){
+                var $trigger = $(this),
+                    id = $trigger.attr('data-info_box-id'),
+                    $infoBox =  $('.limz_infoBox[data-info_box-id='+id+']'),
+                    $content = $infoBox.find('.limz_infoBox_content').clone(),
+                    bodyWidth = body.outerWidth();
+
+                $trigger.append($content);
+
+
+
+                if(bodyWidth < 400){
+                    var triggerOffset = $trigger.offset().left,
+                        regularLeft = (bodyWidth - $content.outerWidth()) / 2,
+                        left = regularLeft - triggerOffset + 'px';
+
+                    $content.css('left', left);
+
+                } else {
+                    if($content.offset().left + $content.outerWidth() > bodyWidth){
+                        $content.css('right', '0');
+                    } else {
+                        $content.css('left', '0');
+                    }
+                }
+
+                body.off('mouseenter.limzInfoBox');
+                $content.on('mouseleave', function(){
+                    $content.remove();
+                    setInfoBoxListener();
+                });
+
+            });
+        }
+
+        setInfoBoxListener();
+
+
+        jQuery('.fancybox').on('mousedown', function() {
+            jQuery(this).fancybox({
+                padding     : [50,50,50,50],
+                maxWidth	: 800,
+                maxHeight	: 600,
+                fitToView	: true
+            });
+            return false;
+        });
+
+        jQuery('.fancybox').click(function() {
+            return false;
+        });
+
+
+
+        /*jQuery('.fancybox').mousedown(function() {
+            jQuery('.fancybox').fancybox({
+                maxWidth	: 800,
+                maxHeight	: 600,
+                fitToView	: false,
+                width		: '70%',
+                height		: '70%',
+                autoSize	: false,
+                closeClick	: false,
+                openEffect	: 'none',
+                closeEffect	: 'none'
+            });
+        });*/
+
+
+    });
+</script>
+
+
+<div id="limz_responsive_measurement"></div>
+<!-- Generated in 0.130 seconds. (74 q) -->
+
+	<script type='text/javascript' src='http://www.sitrion.com/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=2.5.4-5380'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-includes/js/comment-reply.min.js?ver=4.5.3'></script>
+<script type='text/javascript' src='http://www.sitrion.com/wp-includes/js/wp-embed.min.js?ver=4.5.3'></script>
+</body>
+
+</html>

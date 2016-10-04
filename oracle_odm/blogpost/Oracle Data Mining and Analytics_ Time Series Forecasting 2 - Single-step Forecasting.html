@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0080)http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="cye-disabled cye-nm"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/whoami"></script>
+ <title>Oracle Data Mining and Analytics: Time Series Forecasting 2 - Single-step Forecasting</title>
+
+ <link rel="shortcut icon" href="http://oracledmt.googlepages.com/oracledmt.ico" type="image/x-icon">  
+ <link rel="icon" href="http://oracledmt.googlepages.com/oracledmt.ico" type="image/x-icon">
+
+ <meta name="keywords" content="Oracle Data Mining and Analytics">
+ <meta name="description" content="Oracle Data Mining and Analytics">
+ <script type="text/javascript" async="" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/saved_resource" class="_ext__off"></script><script src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/cb=gapi.loaded_1" async=""></script><script src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript">(function() { (function(){function c(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(l){}};this.tick("start",null,a)}var a,e;window.performance&&(e=(a=window.performance.timing)&&a.responseStart);var h=0<e?new c(e):new c;window.jstiming={Timer:c,load:h};if(a){var b=a.navigationStart;0<b&&e>=b&&(window.jstiming.srt=e-b)}if(a){var d=window.jstiming.load;0<b&&e>=b&&(d.tick("_wtsrt",void 0,b),d.tick("wtsrt_","_wtsrt",
+e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&0<b&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,d&&0<b&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(k){}})();window.tickAboveFold=function(c){var a=0;if(c.offsetParent){do a+=c.offsetTop;while(c=c.offsetParent)}c=a;750>=c&&window.jstiming.load.tick("aft")};var f=!1;function g(){f||(f=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",g,!1):window.attachEvent("onscroll",g);
+ })();</script><script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return 0<=c[1].search("(^|&)m=")?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(-1!=d.indexOf("Mobile")&&-1!=d.indexOf("WebKit")&&-1==d.indexOf("iPad")||-1!=d.indexOf("Opera Mini")||-1!=d.indexOf("IEMobile")){var e=a();e&&window.location.replace(e)};
+</script>
+<meta name="generator" content="Blogger">
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.blogger.com/favicon.ico">
+<link rel="alternate" type="application/atom+xml" title="Oracle Data Mining and Analytics - Atom" href="http://oracledmt.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Oracle Data Mining and Analytics - RSS" href="http://oracledmt.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Oracle Data Mining and Analytics - Atom" href="https://www.blogger.com/feeds/19467404/posts/default">
+<link rel="alternate" type="application/atom+xml" title="Oracle Data Mining and Analytics - Atom" href="http://oracledmt.blogspot.com/feeds/114246618283500116/comments/default">
+<link rel="stylesheet" type="text/css" href="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/50269083-blog_controls.css">
+<link rel="stylesheet" type="text/css" href="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/authorization.css">
+<script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/979395223-backlink.js"></script><style id="nightModeStyle">
+html.cye-enabled.cye-nm:not(*:-webkit-full-screen) body,
+ html.cye-enabled.cye-nm:not(*:-webkit-full-screen) #cye-workaround-body {-webkit-filter:contrast(91%) brightness(84%) invert(1);}</style><style id="cyebody">html.cye-enabled.cye-lm body{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style><style id="cyediv">html.cye-enabled.cye-lm div{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style><style id="cyetable">html.cye-enabled.cye-lm th{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}html.cye-enabled.cye-lm td{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style><style id="cyetextInput">html.cye-enabled.cye-lm input[type=text]{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}html.cye-enabled.cye-lm textarea{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style><style id="cyeselect">html.cye-enabled.cye-lm select{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style><style id="cyeul">html.cye-enabled.cye-lm ul{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style><style id="cyeChangeByClick">html.cye-enabled.cye-lm .cye-lm-tag,html.cye-enabled.cye-lm.cye-lm-tag{background-color:#cde9d0 !important;border-color:rgb(51, 58, 52) !important;background-image:none !important;color:#000000  !important}</style>
+<script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/4080670514-backlink_control.js"></script><style type="text/css">.comment-toggler {background:url(https://resources.blogblog.com/img/triangle_ltr.gif) no-repeat left center;padding-right:11px;margin-right:0.1em;cursor:pointer;cursor:hand;}#blogger-dcom-block dd {display:none;margin-top:1em;padding-left:14px;margin-left:0.4em;}</style>
+<script type="text/javascript">var BL_backlinkURL = "https://www.blogger.com/dyn-js/backlink_count.js";var BL_blogId = "19467404";</script>
+
+ 
+ <link rel="stylesheet" href="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/base-weblog.css" type="text/css">
+ <link rel="stylesheet" href="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/oracledmt.css" type="text/css">
+ 
+ <style type="text/css">
+   body {margin-top:32px !important}
+
+   /* Delicious Tag Cloud Styles  */
+  .delicious-tags{font-family:arial,sans-serif}
+  .delicious-tags a img{border:0;display:inline;margin:0 0 0 3px;padding:0}
+  .delicious-tags a{text-decoration:none}
+  .delicious-tags a:hover{text-decoration:underline}
+  .delicious-tags ul{list-style-type:none;margin:0;padding:0; text-align:justify}
+  .delicious-cloud li{
+       display:inline;
+       text-align:left;
+       background-image:none !important;
+       padding:0;margin:0;
+       vertical-align:baseline !important;
+      }
+  .delicious-cloud {}
+  .delicious-tag-count{padding-left:0.2em;font-size:9px;color:#000}
+  .delicious-cloud li:before{content:"" !important}
+
+ </style>
+
+  <script type="text/javascript">
+    // Delicious tag variables
+    var delTagPost = 'http://oracledmt.blogspot.com/2006/01/categories.html';
+    var delArchivePost = 'http://oracledmt.blogspot.com/2006_01_01_oracledmt_archive.html';
+    var delUserName ='oracledmt';
+    var delShowTags = false;
+    var delShowNotes = false;
+    var delNoteAppend = '';
+    var delSep = ', ';
+  </script> 
+<!-- --><style type="text/css">@import url(https://www.blogger.com/static/v1/v-css/navbar/3334278262-classic.css);
+div.b-mobile {display:none;}
+</style>
+
+<style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style></head><div id="cyeBlackMaskLayer" style="position: fixed; width: 1980px; height: 1080px; z-index: -2147483648; background-color: rgb(19, 19, 19);"></div>
+
+<body class="layout-two-column-right"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="100%" id="navbar-iframe" name="navbar-iframe" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/navbar.html"></iframe></div>
+<script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/plusone.js" gapi_processed="true"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d19467404\x26blogName\x3dOracle+Data+Mining+and+Analytics\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dBLUE\x26layoutType\x3dCLASSIC\x26searchRoot\x3dhttp://oracledmt.blogspot.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttp://oracledmt.blogspot.com/\x26vt\x3d7586378252000738298',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+
+  <div id="container">
+    <div id="container-inner" class="pkg">
+
+      
+      <!-- banner -->
+      <div id="banner">
+        <div id="banner-inner" class="pkg">
+          <h1 id="banner-header"><a href="http://oracledmt.blogspot.com/" accesskey="1">Oracle Data Mining and Analytics</a></h1>
+          <h2 id="banner-description">Blog on Data Mining and Analytics, with a special focus on Oracle. Analytics paves the way to transform databases into Knowledgebases.
+            <table width="160"> <tbody><tr>    
+            <form action="http://www.google.com/translate" target="_blank"></form>   
+            <td width="20">
+            <script type="text/javascript">
+            <!-- 
+            document.write ('<input name=u value="'+location.href+'" type="hidden">') 
+            //--> 
+            </script><input name="u" value="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html" type="hidden">     
+            <noscript>&lt;input name="u" value=http://oracledmt.blogspot.com/ type="hidden" /&gt;</noscript> 
+            <input name="hl" value="en" type="hidden">   
+            <input name="ie" value="UTF8" type="hidden">   
+            <input name="langpair" value="" type="hidden">   
+            <input name="langpair" value="en|fr" title="Français/French" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539949_e76af75976.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|de" title="Deutsch/German" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539933_041ca1eda2.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|it" title="Italiano/Italian" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539953_0384ccecf9.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|pt" title="Português/Portuguese" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539966_0d09b410b5.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|es" title="Español/Spanish" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539946_2fabed0dbf.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|ja" title="日本語/Japanese" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539955_925e6683c8.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|ko" title="한국어/Korean" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/13539958_3c3b482c95.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+            <td width="20"><input name="langpair" value="en|zh-CN" title="中文（简体）/Chinese Simplified " src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/14324441_5ca5ce3423.jpg" onclick="this.form.langpair.value=this.value" height="13" type="image" width="20"> </td>   
+               </tr>   </tbody></table>  
+          </h2>
+        </div>
+      </div>
+
+      <div id="pagebody">
+        <div id="pagebody-inner" class="pkg">
+
+          <div id="alpha">
+            <div id="alpha-inner" class="pkg">
+            
+              <!-- entry -->
+              
+                <!-- content nav -->
+                <p class="content-nav">
+                  « <a href="http://oracledmt.blogspot.com/">Home</a><span> | <a href="http://oracledmt.blogspot.com/2006/03/democratization-of-business.html">The Democratization of Business Intelligence</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/running-oracle-data-miner-on-mac.html">Running Oracle Data Miner on the Mac</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/real-time-scoring-model-management-1.html">Real-Time Scoring &amp; Model Management 1 - Life Cycl...</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/real-time-scoring-model-management-2.html">Real-Time Scoring &amp; Model Management 2 - Implement...</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/real-time-scoring-model-management-3.html">Real-Time Scoring &amp; Model Management 3 - Performan...</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/oracle-life-sciences-meeting.html">Oracle Life Sciences Meeting</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/improved-stock-research-through.html">Improved Stock Research Through Analytics?</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/multi-touch-screens-next-input-device.html">Multi-touch Screens - The Next Input Device?</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/poll-how-do-you-work-with-analytics.html">Poll - How do you work with analytics?</a> »</span><span style="display:none"> | <a href="http://oracledmt.blogspot.com/2006/02/competing-on-analytics.html">Competing on Analytics</a> »</span><span style="display:none">&nbsp;</span><br>
+                </p>
+              
+
+               
+                <h3 class="date-header">Wednesday, March 15, 2006&nbsp;</h3>
+                <div class="entry" id="post-114246618283500116">
+                  <h2 class="entry-header">Time Series Forecasting 2 - Single-step Forecasting</h2>
+                  <div class="entry-content">
+                    <div class="entry-body">
+                      <p>This is Part 2 in a series on time series forecasting - The full series is <a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a>, <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html" target="_blank">Part 2</a>, and <a href="http://oracledmt.blogspot.com/2006/05/time-series-forecasting-3-multi-step.html" target="_blank">Part 3</a>.<br><br>This post, long overdo, covers how to do single-step or open-loop forecasting using the data mining approach described in <a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a> of this series. It describes each step of the methodology with an example and, at the end, compares the results with those from a traditional time series approach.<br><br>Single-step forecasting (<a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a>) does not use a model's previous predictions as inputs to the model's later predictions. If the previous value of the target is included as input to the model, we can only make forecasts for the next time interval, thus the single-step name. Single-step forecasts can be directly computed using Oracle Data Miner's Apply and Test mining activities or the SQL <span style="font-family:monospace;">PREDICTION</span> function.<br><br><strong>Methodology</strong><br>As discussed in <a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a>, when modeling time series it is usually necessary to make decisions regarding:<br></p><ol><li>Variance stabilization and trend removal</li><li>Target normalization</li><li>Lagged attribute selection</li></ol><p class="body_text"><br>After these steps have been taken, it is possible to create a regression model that can be used for forecasting future values of the series.<br><br>In order to illustrate the process, let's take a look at an example of non-stationary seasonal time series widely used in the time series literature. The data is provided in the book <em>Time Series Analysis: Forecasting and Control</em> by Box and Jenkins (1976). The series corresponds to monthly international airline passengers (in thousands) from January 1949 to December 1960 (Figure 1).<br><br><a href="http://photos1.blogger.com/blogger/2799/1927/1600/airline1_web.0.jpg" target="_blank"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/airline1_web.0.jpg" border="0" alt=""></a></p><p style="text-align:center;" class="body_text">Figure 1: Number of international airline passengers (thousands) per month.</p><p class="body_text"><strong>Preparing the Series</strong><br>Before modeling a time series we need to stabilize the series. That is, remove trends from the mean and from the variance. If the mean has a trend then the average value of the series either steadily increases or decreases over time. If the variance has a trend then the variability of the series steadily increases or decreases over time. Ideally, what we are looking for is the series to be bouncing up and down a fixed value (the mean) and with about the same amount of bouncing over time. The series in Figure 1 has both a trend in the mean, it steadily increases over time, and the variance, the size of the swings in the series also steadily increases over time.<br><br>First we stabilize the variance. This can be done by applying a Box-Cox power transform. This transform has the following form: y(h) = (y^h - 1) / h, if h is not equal to 0 and y(h) = log(y) if h is 0. In general, the LOG transform (h=0) is a good choice for removing increasing variability. Figure 2 shows the transformed series after the LOG transform. The upward trend over time is still visible but the amount of variation in the series is about the same throughout the series.<br><br><a href="http://photos1.blogger.com/blogger/2799/1927/1600/airline2_web.0.jpg" target="_blank"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/airline2_web.0.jpg" border="0" alt=""></a></p><p style="text-align:center;" class="body_text">Figure 2: Log transformed series.</p><p class="body_text">After stabilizing the variance, we can remove the remaining trend by differencing the series by subtracting the value of the series at time <em>t</em> from the value in the previous time period <em>t-1</em> (<a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a>). This process can be repeated until the trend disappears. Alternatively, we can add a time index (e.g., elapsed time from a fixed date) as one of the predictors. Figure 3 shows that the upward trend has been removed from the data after differencing the LOG transformed series once.<br><br><a href="http://photos1.blogger.com/blogger/2799/1927/1600/airline3_web.0.jpg" target="_blank"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/airline3_web.0.jpg" border="0" alt=""></a></p><p style="text-align:center;" class="body_text">Figure 3: First order differencing after log transformation.</p>We can easily stabilize the series (variance and mean) using SQL. I used, for the above transformations, the SQL <span style="font-family:monospace;">LOG</span> function (variance stabilization) and the <span style="font-family:monospace;">LAG</span> analytical function (differencing) as follow:<br><pre>CREATE VIEW airline_xfrm AS<br>SELECT a.*<br>FROM (SELECT month, passengers, <br>             tp - LAG(tp,1) OVER (ORDER BY month) tp<br>      FROM   (SELECT month, passengers, LOG(10,PASSENGERS) tp<br>              FROM   airline)) a;<br></pre>The inner query stabilizes the variance using the LOG transformation. The outer query implements first order differencing. I am keeping the untransformed series (<span style="font-family:monospace;">passengers</span>) around to compute model quality later on. If we needed higher order differencing we would repeat the outer query. For example, the following query does a second order differencing:<br><pre>CREATE VIEW airline_xfrm1 AS<br>SELECT a.*<br>FROM (SELECT month, passengers, <br>             tp - LAG(tp,1) OVER (ORDER BY month) tp<br>      FROM (SELECT month, passengers, <br>                   tp - LAG(tp,1) OVER (ORDER BY month) tp<br>            FROM   (SELECT month, passengers, LOG(10,PASSENGERS) tp<br>                    FROM   airline))) a;<br></pre><p class="body_text">This can also be done in Oracle Data Miner (ODMR) using the Compute Field transformation under the Data-Transformation menu. In this case, first create a view with a new column with the LOG transformed value. Next, create a new view using the LAG transformation.<br><br>After stabilizing the series we can optionally normalize it. It is usually useful to normalize the target for SVM regression. This helps speed up the algorithm convergence. For time series problems, the target should be normalized prior to the creation of the lagged variables. If done afterwards, we should use the range of values in the original series for setting the normalization parameters. Normalization can be done using ODMR, DBMS_DATA_MINING PL/SQL package, or the data mining Java API. In the case of ODMR the normalization transformation is under the Data-Transformation menu. For this example, I selected z-score normalization. This transformation subtracts the mean of the series from each sample and then divides the result from the standard deviation. For the <span style="font-family:monospace;">airline_xfrm</span> view we have <span style="font-family:monospace;">AVG(tp)= 0.003919158 </span> and <span style="font-family:monospace;">STDDEV(tp)= 0.046271162</span>. The view with the normalized data is as follow:</p><pre>CREATE VIEW airline_norm AS<br>SELECT month, passengers, (tp - 0.003919158)/0.046271162 tp<br>FROM   airline_xfrm;<br></pre><p class="body_text"><strong>Selecting Lagged Variables</strong><br>Before building a model we need to select which lag values of the prepared series to use as predictors of future values. In the case of the data mining approach described in <a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a>, this is equivalent to selecting a time window and including all the lag values in that window. Prior knowledge about the activity represented by the series can provide an initial clue. For example, for a monthly series, we could select a window of size 12 if we know that the series has a similar behavior on yearly basis. It is also useful to analyze the autocorrelations in the series and chose a window size that includes the largest autocorrelation terms.<br><br>Figure 4 shows the first twenty autocorrelations coefficients for the airline series. The largest autocorrelation term is at lag 12. This matches the expected behavior that airline travels have a strong yearly seasonal effect. Based on this analysis, we may want to include as predictors all the lags in a window of size 12.<br><br><a href="http://photos1.blogger.com/blogger/2799/1927/1600/airline4_web.jpg" target="_blank"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/airline4_web.jpg" border="0" alt=""></a></p><p style="text-align:center;" class="body_text">Figure 4: First twenty autocorrelation coefficients for the airline data.</p>Autocorrelations can be easily computed using the SQL <span style="font-family:monospace;">CORR</span> and <span style="font-family:monospace;">LAG</span> analytical functions. The autocorrelation of the <span style="font-family:monospace;">airline</span> series with its first lag can be computed as follow:<br><pre>SELECT CORR(ts,tp)<br>FROM (SELECT tp, LAG(tp,1) OVER (ORDER BY month) ts<br>      FROM airline_norm);<br></pre>The <span style="font-family:monospace;">xcorr</span> function below can be used to compute all autocorrelations,  over a window of <span style="font-family:monospace;">p_max_lag</span> size, for a series in the<span style="font-family:monospace;"> p_base_col</span> column and sequence index (e.g., the time column) given in the <span style="font-family:monospace;">p_seq_col</span> column. In fact, the function returns the cross-correlation between any two columns (<span style="font-family:monospace;">p_base_col</span> and <span style="font-family:monospace;">p_lag_col</span>). The autocorrelation is computed as a special  case when <span style="font-family:monospace;">p_base_col </span>and <span style="font-family:monospace;">p_lag_col</span> are the same.<br><pre>CREATE OR REPLACE PROCEDURE xcorr(p_in_table   VARCHAR2, <br>                                  p_out_table  VARCHAR2, <br>                                  p_seq_col    VARCHAR2,<br>                                  p_base_col   VARCHAR2,<br>                                  p_lag_col    VARCHAR2,<br>                                  p_max_lag    NUMBER) AS<br>   v_stmt VARCHAR2(4000);<br>   v_corr NUMBER;<br>BEGIN<br>   v_stmt:= 'CREATE TABLE ' || p_out_table || <br>            '(lag_num NUMBER, correlation NUMBER)';<br>   EXECUTE IMMEDIATE v_stmt;<br><br>   FOR i IN 1..p_max_lag LOOP<br>      v_stmt:=<br>        'SELECT CORR(' || p_base_col || ', lag_val) ' ||<br>        'FROM (SELECT ' || p_base_col || ',' ||<br>                      'LAG(' || p_lag_col || ',' || i || ') ' ||<br>                      'OVER(ORDER BY ' || p_seq_col || ') lag_val ' ||<br>              'FROM ' || p_in_table || ')';<br>      EXECUTE IMMEDIATE v_stmt INTO v_corr;<br>      v_stmt:='INSERT INTO ' ||  p_out_table ||<br>             ' (lag_num, correlation) VALUES(:v1, :v2)';<br>      EXECUTE IMMEDIATE v_stmt using i, v_corr;<br>   END LOOP;        <br>END;<br>/<br>SHOW ERRORS;<br></pre><strong>Modeling</strong><br>After preparing the series and selecting the lagged variables we are ready to build a model to forecast future values of the series. The starting point is the prepared series computed in the above <span style="font-family:monospace;">airline_norm</span> view. The month column is a sequence ranging from 1 to 144 going up with time. The first row is NULL as we differenced the original series once.<br><br>First we need to create a view with the twelve lagged variables:<br><pre>CREATE VIEW airline_lag AS <br>SELECT a.*<br>FROM (SELECT month, passengers, tp,<br>             LAG(tp, 1)  OVER (ORDER BY month) L1,<br>             LAG(tp, 2)  OVER (ORDER BY month) L2,<br>             LAG(tp, 3)  OVER (ORDER BY month) L3,<br>             LAG(tp, 4)  OVER (ORDER BY month) L4,<br>             LAG(tp, 5)  OVER (ORDER BY month) L5,<br>             LAG(tp, 6)  OVER (ORDER BY month) L6,<br>             LAG(tp, 7)  OVER (ORDER BY month) L7,<br>             LAG(tp, 8)  OVER (ORDER BY month) L8,<br>             LAG(tp, 9)  OVER (ORDER BY month) L9,<br>             LAG(tp, 10) OVER (ORDER BY month) L10,<br>             LAG(tp, 11) OVER (ORDER BY month) L11,<br>             LAG(tp, 12) OVER (ORDER BY month) L12<br>      FROM airline_norm) a;<br></pre>We can also create this view using ODMR's Compute Field wizard.<br><br>Next we create the training dataset as a subset of the rows in <span style="font-family:monospace;">airline_lag</span>. Because we want to test the model's forecasting capability we should train on older data samples and held aside, for testing, the most recent samples in the series. Samples 132-144 are used for the test data set. We also need to filter the first 13 rows as some of the lagged variables have NULLs for these rows. The following view creates the training data set:<br><pre>CREATE VIEW airline_train AS <br>SELECT month, tp, L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12<br>FROM   airline_lag a<br>WHERE  month &gt; 13 AND month &lt; 132;<br></pre>Finally we build the model using either ODMR or one of the data mining APIs. For this example, I used the PL/SQL API and the default settings for the SVM regression algorithm:<br><pre>BEGIN<br>  DBMS_DATA_MINING.CREATE_MODEL(<br>    model_name          =&gt; 'airline_SVM',<br>    mining_function     =&gt; dbms_data_mining.regression,<br>    data_table_name     =&gt; 'airline_train',<br>    case_id_column_name =&gt; 'month',<br>    target_column_name  =&gt; 'tp');<br>END;<br></pre>This statement creates an SVM regression model named <span style="font-family:monospace;">airline_SVM</span> using the view <span style="font-family:monospace;">airline_train</span> as the training data.<br><br>Figure 5 displays the residual plot for the training data. The residuals are computed as the difference between the prediction and the actual value for the series. Ideally we want the residuals (Y-axis values) to be randomly distributed around zero with no discernible trends. The plot shows that the model does a good job capturing the process underlying the time series.<br><br><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://photos1.blogger.com/blogger/2799/1927/1600/airline_resid_web.jpg" target="_blank"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/airline_resid_web.jpg" border="0" alt=""></a><p style="text-align:center;" class="body_text">Figure 5: Residual plot.</p><p class="body_text"><strong>Forecasting</strong><br>To create forecasts we only need to apply the model to new data. For example, applying the model to the airline_lag view generates one-step ahead forecasts for both the training data (samples 1-131) as well as the held aside test data (samples 132-144). The following query accomplishes that:</p><pre>SELECT month, passengers,<br>            PREDICTION(airline_svm USING a.*) pred<br>      FROM airline_lag a;</pre>However, because the model predictions reflects the transformed data, we cannot compare the predictions with the original values. In order to do so we need to reverse the transformations to bring the results back to the original scale of the data. The steps below list the transformations that need to be reversed as well as how to reverse them. These steps should be done in order:<br><ol><li>Normalization: multiply by the standard deviation (<span style="font-family:monospace;">0.046276747</span>) and add the mean (<span style="font-family:monospace;">0.00409976</span>)</li><li>Differencing: add the previous value of the series to the result from the previous step</li><li>Log: raise 10 to the result of the previous step</li></ol>The query below reverses the transformations according to this prescription and creates a table containing the model forecasts and the original values of the series:<br><pre>CREATE TABLE airline_pred AS<br>SELECT month, passengers, power(10, pred) pred<br>FROM (SELECT month, passengers, <br>             pred + LAG(lp,1) OVER (ORDER BY month) pred<br>      FROM (SELECT month, passengers, LOG(10, passengers) lp, <br>                   (PREDICTION(airline_SVM USING a.*) <br>                    * 0.046271162 + 0.003919158) pred<br>            FROM airline_lag a));<br></pre>The innermost query undoes the normalization and computes the log of the original series. The latter is needed for undoing the differencing operation. The subquery with the <span style="font-family:monospace;">LAG</span> function undoes the differencing step used to remove the trend in the mean of the original series. The outermost query undoes the <span style="font-family:monospace;">LOG</span> transformation used for stabilizing the variance. <br><br>Figure 6 shows the original data, the model predictions, and the residuals for the whole time period (month 1-144). Due to the use of first order differencing, we do not have a prediction for the first time period (month 1).<br><br><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://photos1.blogger.com/blogger/2799/1927/1600/airline_pred_web.jpg" target="_blank"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/airline_pred_web.jpg" border="0" alt=""></a><p style="text-align:center;" class="body_text">Figure 6: Data, predictions, and residuals.</p><p class="body_text">The two vertical bars in the residual series mark the beginning and the end of the samples used for training the model. Samples to the left of the first bar contain NULL values for some of the lagged variables used as inputs to the model. The predictions for this period are a bit off as some of the inputs are missing. Samples to the right of the second bar are the held aside samples used for measuring the model's generalization capabilities. Note that the model output for these samples are one-step ahead forecasts of data unseen during training of the model.<br><br><strong>Comparison with Other Techniques</strong><br>How well does the data mining approach described above compare with other techniques? Table 1 presents the Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE) for the training and the forecast (test) data sets for the data mining approach (SVM) and a linear autoregressive model (AR).</p><br><table border="1" cellpadding="2" cellspacing="2" width="100%"><tbody><tr><td style="font-weight: bold;">Model </td><td style="font-weight: bold;">RMSE Training</td><td style="font-weight: bold;">MAE Training</td><td style="font-weight: bold;">RMSE Test</td><td style="font-weight: bold;">MAE Test</td></tr><tr><td>SVM</td><td>3.7</td><td>3.2</td><td>18.9</td><td>13.4</td></tr><tr><td>AR</td><td>10.1</td><td>7.7</td><td>19.3</td><td>15.9</td></tr></tbody></table><br>The data mining approach performed well. It had smaller RMSE and MAE in the training and the forecasting (test) data sets.<br><br>The next post in this series will show how to do multi-step forecasting. The full series is <a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-part-1_23.html" target="_blank">Part 1</a>, <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html" target="_blank">Part 2</a>, and <a href="http://oracledmt.blogspot.com/2006/05/time-series-forecasting-3-multi-step.html" target="_blank">Part 3</a>.<br><br><strong>10/26/06 - Edits</strong><br><br>In the airline example described above, the normalization shift and scale parameters were computed using the whole data. A better methodology would be to use only the training data for computing these parameters. This alternative normalization scheme also impacts the results for the airline example described in <a href="http://oracledmt.blogspot.com/2006/05/time-series-forecasting-3-multi-step.html" target="_blank">Part 3</a> as the latter builds on the transformations described in <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html" target="_blank">Part 2</a>. <br><br>I have changed the normalization in the above queries so that the parameters are computed using only the training data time period. The results for the RMSE and MAE did not change with the new normalization scheme.<br><br>Readings: <a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;tag=oracledatamin-20&amp;camp=1789&amp;creative=9325&amp;path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FR1Z01T9YOJZMHN">Business intelligence</a>, <a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;tag=oracledatamin-20&amp;camp=1789&amp;creative=9325&amp;path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FROQEJ58JJAALZ">Data mining</a>,  <a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;tag=oracledatamin-20&amp;camp=1789&amp;creative=9325&amp;path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FR3EVHC5JK1LGW3">Oracle analytics</a><p class="blogger-labels">Labels: <a rel="tag" href="http://oracledmt.blogspot.com/search/label/Time%20Series">Time Series</a></p><p></p>
+                      <div class="post-cat" id="cat-114246618283500116">Categories: <a href="http://oracledmt.blogspot.com/2006/01/categories.html?HowTo" class="small-del-link" title="View all posts filed in HowTo">HowTo</a>, <a href="http://oracledmt.blogspot.com/2006/01/categories.html?TimeSeries" class="small-del-link" title="View all posts filed in TimeSeries">TimeSeries</a>, <a href="http://oracledmt.blogspot.com/2006/01/categories.html?DataMining" class="small-del-link" title="View all posts filed in DataMining">DataMining</a>
+                      </div> 
+                    </div>
+                  </div>
+                  <p class="entry-footer">
+                    <span class="post-footers">3/15/2006 03:40:00 PM </span> <span class="separator">|</span> <a class="permalink" href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html">Permalink</a> <span class="item-action"><a href="https://www.blogger.com/email-post.g?blogID=19467404&amp;postID=114246618283500116" title="Email Post"><img class="icon-action" alt="" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/icon18_email.gif" height="13" width="18"></a></span><span class="item-control blog-admin pid-866541400"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=19467404&amp;postID=114246618283500116&amp;from=pencil" title="Edit Post"><img class="icon-action" alt="" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+                  </p>
+                </div>
+                
+                  
+                  <!-- Adsense -->
+                  <div class="adsense" style="text-align:center; padding: 0px 3px 0.5em 3px;">
+                    <script type="text/javascript"><!--
+google_ad_client="pub-9997079327626176";
+google_ad_host="pub-1556223355139109";
+google_ad_host_channel="00077+00000+00005+00174";
+google_ad_width=468;
+google_ad_height=60;
+google_ad_format="468x60_as";
+google_ad_type="text";
+google_color_border="598A92";
+google_color_bg="E7E7EC";
+google_color_link="FFFFFF";
+google_color_url="656565";
+google_color_text="598A92";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+                  </div>   
+
+                  
+                    <a name="comments"></a>
+                    <div class="comments">
+                      <h3 class="comments-header"><script type="text/javascript">var a = 10; if(a == 0) {document.write('No comment');} else if(a == 1) {document.write('1 comment');}else{document.write(a+' comments');}</script>10 comments</h3>
+                      <div class="comments-content">
+        
+                        <!-- comment list -->
+                                 
+                          <a id="114377453213547785"></a>
+                          <div class="comment" id="comment-114377453213547785">
+                            <div class="comment-content">
+                              <p>What are using the create the charts you have displayed here?</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/anon16-rounded.gif" alt="Anonymous" style="display:inline;"></span>&nbsp;<span class="anon-comment-author">mroessler</span> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1143774480000#c114377453213547785">3/30/2006 10:08:00 PM</a> &nbsp;<span class="item-control blog-admin pid-1245402530"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=114377453213547785" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="114377828549085158"></a>
+                          <div class="comment" id="comment-114377828549085158">
+                            <div class="comment-content">
+                              <p>I used MS Excel. I've cut and pasted the data from Oracle Data Miner directly into Excel.</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/14756167848125664628" rel="nofollow">Marcos</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1143778260000#c114377828549085158">3/30/2006 11:11:00 PM</a> &nbsp;<span class="item-control blog-admin pid-866541400"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=114377828549085158" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="114382236966958790"></a>
+                          <div class="comment" id="comment-114382236966958790">
+                            <div class="comment-content">
+                              <p>Thank you.</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/anon16-rounded.gif" alt="Anonymous" style="display:inline;"></span>&nbsp;<span class="anon-comment-author">mroessler</span> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1143822360000#c114382236966958790">3/31/2006 11:26:00 AM</a> &nbsp;<span class="item-control blog-admin pid-1564653902"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=114382236966958790" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="114846751898027109"></a>
+                          <div class="comment" id="comment-114846751898027109">
+                            <div class="comment-content">
+                              <p>I have been asked if I could give a link to the airline data. Here are a couple of links to the data:<br><a href="http://www.xlstat.com/demoHW.xls" rel="nofollow">Excel spreadsheet</a>.<br><a href="http://lib.stat.cmu.edu/datasets/chatfield.txt" rel="nofollow">Text file</a>. It is the last data set in the file (the Grubb-Mason airline passenger time series). This is not in a convenient format but the link is less likely to disappear.</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/14756167848125664628" rel="nofollow">Marcos</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1148467500000#c114846751898027109">5/24/2006 06:45:00 AM</a> &nbsp;<span class="item-control blog-admin pid-866541400"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=114846751898027109" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="114875377848731770"></a>
+                          <div class="comment" id="comment-114875377848731770">
+                            <div class="comment-content">
+                              <p>Mr Campos,<br><br>I hope you don't mind, but I will need to use some of your text as a reference in a statistics paper "prior knowledge about the activity represented by the series can provide an initial clue. It is also useful to analyze the autocorrelations in the series and chose a window size that includes the largest autocorrelation terms".<br><br>In a regression analysis, what is the best value of Lagged data and how can the differences in R values be explained?</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/anon16-rounded.gif" alt="Anonymous" style="display:inline;"></span>&nbsp;<span class="anon-comment-author">AL</span> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1148753760000#c114875377848731770">5/27/2006 02:16:00 PM</a> &nbsp;<span class="item-control blog-admin pid-2043208749"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=114875377848731770" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="114889864733978789"></a>
+                          <div class="comment" id="comment-114889864733978789">
+                            <div class="comment-content">
+                              <p>The best value for the maximum lag for each attribute needs to be determined for each data set. There have been many criteria proposed in the literature for determining the autoregressive  lag length of time series variables. Here are some references on the topic: "<a href="http://www.msu.edu/~yangli/lag.pdf" rel="nofollow">Non-parametric Lag Selection for Time Series</a>", "<a href="http://dss.princeton.edu/online_help/analysis/lags.htm" rel="nofollow">Lag Selection in Time Series Data</a>", and "<a href="http://economicsbulletin.vanderbilt.edu/2004/volume3/EB-04C20021A.pdf" rel="nofollow">Which Lag Length Selection Criteria Should We Employ?</a>."<br><br>It is important to notice that the approach I described used the SVM regression algorithm for learning the autoregressive model. The above references are mostly discussing linear autoregressive models. The SVM approach differs in two ways: the model can be non-linear (gaussian kernel case) and, more importantly, it is not estimated the same way as the traditional linear autoregressive model. The traditional model is estimated by minimizing the sum of squared errors (least squares, maximum likelihood) while the SVM model algorithm minimizes structural risk (with a epsilon-insensitive loss function in my examples). Lag selection criteria (e.g., AIC), in general, assume a traditional linear autoregressive model. As such, they might not be applicable to the SVM approach.<br><br>Lag selection for SVM approach to time series forecast is similar to that in neural networks. Usually, this is done by inspection of autocorrelation and partial autocorrelations. This is the method I described in the paper. A nice feature of SVM, because it tries not to overfit the data, is that the error should go down as we increase the size of the window until we reach the optimum window size (optimum maximum lag). Afterwards, it should remain constant. As a rule of thumb we can try a couple of models with increasing window sizes and select the one that achieves the smallest error before the error remains constant. <a href="http://citeseer.ist.psu.edu/cache/papers/cs/8171/http:zSzzSzwww.ai.mit.eduzSzpeoplezSzgirosizSzhome-pagezSznnsp97.pdf/mukherjee97nonlinear.pdf" rel="nofollow">Murkherjee et al</a> found that this approach worked well for low dimensionality kernels. For high dimensional kernels, they found that, because of a slight overfit to the data, this approach would select a larger window size than necessary, but not by much.<br><br>Finally, regarding R (correlation coefficient), it has an assumption that the model is a linear model. SVM regression in not a linear model if the kernel, as in the examples in the post, is not the linear kernel. For non-linear models R is not applicable directly (see <a href="http://www.visualstatistics.net/Visual%20Statistics/14%20Nonlinear%20Regression%20Analysis.htm" rel="nofollow">here</a> and <a href="http://noppa5.pc.helsinki.fi/koe/corr/misint.html" rel="nofollow">here</a>).</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/14756167848125664628" rel="nofollow">Marcos</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1148898600000#c114889864733978789">5/29/2006 06:30:00 AM</a> &nbsp;<span class="item-control blog-admin pid-866541400"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=114889864733978789" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="2133743488161309540"></a>
+                          <div class="comment" id="comment-2133743488161309540">
+                            <div class="comment-content">
+                              <p>Hi Marcos,<br>I have noticed that you are using the testing data itself while making the prediction for test data. "CREATE TABLE airline_pred .."<br>Doesn't that cause a bias?</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/03963734167350173124" rel="nofollow">husnu</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1180394340000#c2133743488161309540">5/28/2007 07:19:00 PM</a> &nbsp;<span class="item-control blog-admin pid-919965915"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=2133743488161309540" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="4768350139093609303"></a>
+                          <div class="comment" id="comment-4768350139093609303">
+                            <div class="comment-content">
+                              <p>Hi Husnu:<br><br>Thanks for the comment. This is an important point. In this case it is not a problem because I am doing one-step ahead forecast. During the testing phase the model has available to it previous values of the series but the next one (the one to forecast). So to forecast at time t+1 I can use values of the series all the way to time step t. In the case of multi-step forecasting (part 3 post) then I cannot use any of the values in the test data.</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/14756167848125664628" rel="nofollow">Marcos</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1180448280000#c4768350139093609303">5/29/2007 10:18:00 AM</a> &nbsp;<span class="item-control blog-admin pid-866541400"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=4768350139093609303" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="2420784286394426687"></a>
+                          <div class="comment" id="comment-2420784286394426687">
+                            <div class="comment-content">
+                              <p>Thanks for your answer. Then can we say that in practice multi-step forecasting is more useful. Since usually we don't know the data that will be predicted. Right?</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/03963734167350173124" rel="nofollow">husnu</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1180473780000#c2420784286394426687">5/29/2007 05:23:00 PM</a> &nbsp;<span class="item-control blog-admin pid-919965915"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=2420784286394426687" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                 
+                          <a id="7341935289801661932"></a>
+                          <div class="comment" id="comment-7341935289801661932">
+                            <div class="comment-content">
+                              <p>Actually both types of forecast are very useful. It is really a matter of how far ahead in the future you need to forecast. Ideally, it would be better to do one-step ahead forecast if you can as you don't need to  use the model's previous forecasts (guesses) as input for future ones.<br><br>In both scenarios you do not have the data for the period that you want to forecast. In my example I had the data for many periods ahead. But in a real situation the analyst would only have data about the past. He would forecast the next time period and would evaluate the forecast once he received the new data. <br><br>This is not uncommon. For example, a publishing company may need to forecast what will be the demand for its magazines for the coming week. It will then print enough magazines to cover the estimated demand. It will do it every week one step at a time. It will only know how good the forecast was after the end of the week.</p>
+                            </div>
+                            <p class="comment-footer">
+                              Posted by <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b16-rounded.gif" alt="Blogger" style="display:inline;"></span>&nbsp;<a href="https://www.blogger.com/profile/14756167848125664628" rel="nofollow">Marcos</a> |
+                              <a href="http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html?showComment=1180483800000#c7341935289801661932">5/29/2007 08:10:00 PM</a> &nbsp;<span class="item-control blog-admin pid-866541400"><a style="border:none;" href="https://www.blogger.com/delete-comment.g?blogID=19467404&amp;postID=7341935289801661932" title="Delete Comment"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                            </p>
+                          </div>       
+                                   
+                        <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=19467404&amp;postID=114246618283500116&amp;isPopup=true" onclick="window.open(this.href, &#39;bloggerPopup&#39;, &#39;toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450&#39;);return false;">Post a Comment</a>
+                      </div>
+                    </div>            
+                     
+              
+            
+                  
+                    <a name="links"></a>
+                    <div class="comments-open">
+                      <h2 class="comments-open-header">Links to this post</h2>
+                    </div>
+                  
+                    <dl id="comments-block">
+                      <script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/backlink.js" charset="utf-8" defer="true">
+</script>
+<noscript>&lt;a href="http://blogsearch.google.com/?ui=blg&amp;q=link:http://oracledmt.blogspot.com/2006/03/time-series-forecasting-2-single-step.html"&gt;See links to this post&lt;/a&gt;</noscript>
+<div id="blogger-dcom-block" style="display:none">
+                        <dt class="comment">
+                          <span class="comment-toggler">&nbsp;</span>
+                          <a href="http://oracledmt.blogspot.com/2006/03/%3C$BlogBacklinkURL$%3E" rel="nofollow">&lt;$BlogBacklinkTitle$&gt;</a> <span class="item-control blog-admin"><a style="border:none;" href="https://www.blogger.com/delete-backlink.g?blogID=19467404&amp;postID=114246618283500116&amp;backlinkURL=%3C$BlogBacklinkURLEscaped$%3E" title="Remove Link"><span class="delete-comment-icon">&nbsp;</span></a></span>
+                        </dt>
+                        <dd class="comment-content">&lt;$BlogBacklinkSnippet$&gt;
+                          <br>
+                          <span class="comment-footer">posted by &lt;$BlogBacklinkAuthor$&gt; @ &lt;$BlogBacklinkDateTime$&gt;</span> 
+                        </dd>
+                      </div>
+<script type="text/javascript">if (typeof BL_addOnLoadEvent == 'function') { BL_addOnLoadEvent(function() { BL_writeBacklinks(); }); }</script>
+
+                    </dl>
+                    <p class="comment-timestamp"><script type="text/javascript">function BlogThis() {
+Q=''; x=document; y=window;
+if(x.selection) {
+  Q=x.selection.createRange().text;
+} else if (y.getSelection) {
+  Q=y.getSelection();
+} else if (x.getSelection) {
+  Q=x.getSelection();
+}
+popw = y.open('https://www.blogger.com/blog-this.g?t=' +
+  escape(Q) + '&u=' + escape(location.href) + '&n=' +
+  escape(document.title),'bloggerForm',
+  'scrollbars=no,width=475,height=300,top=175,left=75,status=yes,resizable=yes');
+void(0);
+}
+</script>
+<a class="comment-link" href="javascript:BlogThis();" id="b-backlink">Create a Link</a></p>
+                   
+                                    
+                     
+                   
+            </div>
+          </div>
+ 
+          <!-- sidebar -->  
+          <div id="beta">
+            <div id="beta-inner" class="pkg">
+
+              <!-- user photo -->
+              <div class="module-photo module">
+                <div class="module-content"><a href="https://www.blogger.com/profile/14756167848125664628"><img width="120" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/photo1.jpg"></a></div>
+              </div>
+
+              <!-- about page link -->
+              <div class="module-about module">
+                <h2 class="module-header">About me</h2>
+                <div class="module-content">
+                  <ul class="module-list">
+                    <li class="module-list-item"><strong>Marcos M. Campos</strong>: <span style="font-size:90%;">Development Manager for Oracle Data Mining Technologies. Previously Senior Scientist with Thinking Machines. Over the years I have been working on transforming databases into easy to use analytical servers.</span></li>
+                    <li class="module-list-item"><a href="https://www.blogger.com/profile/14756167848125664628">My profile</a></li>
+                  </ul>  
+                  <a href="mailto:oracledmt@gmail.com"><img width="180" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/gmail.0.png"></a>       
+                </div>
+              </div>
+
+
+              <!-- disclaimer -->
+              <div class="module-about module">
+                <h2 class="module-header">Disclaimer</h2>
+                <div class="module-content">
+                  <ul class="module-list">
+                      <li class="module-list-item"><span style="font-size:90%;">Opinions expressed are entirely my own and do not reflect the position of Oracle or any other corporation. The views and opinions expressed by visitors to this blog are theirs and do not necessarily reflect mine.</span></li>
+                      <!--Creative Commons License-->
+                      <li class="module-list-item"><span style="font-size:90%;">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons license</a>.</span></li>
+                      <li class="module-list-item"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/somerights20.png"></a></li>
+                      <!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                      <Work rdf:about="">
+                        <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+                      </Work>
+                      <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+                  </ul>         
+                </div>
+              </div>
+
+              <!-- Email-digest -->
+              <div class="module-about module">
+                <h2 class="module-header">Email-Digest</h2>
+                <div class="module-content">
+                  <form method="post" action="http://www.feedblitz.com/feedblitz.exe?BurnUser" target="_blank"><label for="email">Subscribe to email alerts</label><br><input name="email" maxlength="255" type="text" size="20" id="email" value="enter email here"><br><input name="uri" type="hidden" value="OracleDataMining"> <input type="submit" value="subscribe"><p></p></form>              
+                </div>
+              </div>
+            
+              <!-- feeds -->
+              <div class="module-about module">
+                <h2 class="module-header">Feeds</h2>
+                <div class="module-content">
+                  <script type="text/javascript">
+                    <!-- 
+                    if (navigator.appName.indexOf('Microsoft') != -1)
+                      document.write ('<iframe name="feedFrame" scrolling="yes" width=170 height=57 frameborder=0 marginheight=0 marginwidth=0 src ="http://cns-alumni.bu.edu/~mmcampos/blog/template-dmt/feeds.html"></iframe>') 
+                    else
+                      document.write ('<iframe name="feedFrame" scrolling="auto" width=170 height=57 frameborder=0 marginheight=0 marginwidth=0 src ="http://cns-alumni.bu.edu/~mmcampos/blog/template-dmt/feeds.html"></iframe>')                     
+                    //--> 
+                  </script><iframe name="feedFrame" scrolling="auto" width="170" height="57" frameborder="0" marginheight="0" marginwidth="0" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/feeds.html"></iframe>         
+                  <noscript>&lt;iframe name="feedFrame" scrolling="yes" width=170 height=57 frameborder=0 marginheight=0 marginwidth=0 src = "http://cns-alumni.bu.edu/~mmcampos/blog/template-dmt/feeds.html"&gt;&lt;/iframe&gt;</noscript>                  
+                </div>
+              </div>
+              
+              <!-- Google site search code -->
+              <div class="module-about module">
+                <h2 class="module-header">Search</h2>
+                <div class="module-content">
+                  <form method="GET" action="http://www.google.com/search">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <input type="hidden" name="oe" value="UTF-8">
+                    <input type="text" name="q" size="20" maxlength="255" value="">
+                    <font size="-1">
+                      <input type="hidden" name="domains" value="oracledmt.blogspot.com">
+                      <input type="hidden" name="sitesearch" value="oracledmt.blogspot.com"><br>
+                      <input type="submit" name="btnG" value="Go">
+                    </font>
+                  </form>
+                </div>
+              </div>   
+              <!-- series -->
+              <div class="module-archives module">
+                <h2 class="module-header">Series</h2>
+                <div class="module-content">
+                  <ul class="module-list">
+                    <li class="module-list-item"><a href="http://oracledmt.blogspot.com/2006/01/time-series-forecasting-series.html">Time Series Forecasting</a></li>                
+                    <li class="module-list-item"><a href="http://oracledmt.blogspot.com/2006/01/real-time-scoring-model-management.html">Real Time Scoring &amp; Model Management</a></li>                
+                  </ul>
+                </div>
+              </div> 
+              <!-- posts -->
+              <div class="module-archives module">
+                <h2 class="module-header">Posts</h2>
+                <div class="module-content">
+                  <a href="http://oracledmt.blogspot.com/2006/01/all-posts.html">All Posts</a><p>
+                         
+                  
+                    <select name="PreviousItemsMenu" width="250" style="width: 172px;" onchange="location.href=this.options[this.selectedIndex].value;">
+                      <option value="/">- Previous Posts -</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/03/democratization-of-business.html">The Democratization of Business Intelligence</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/running-oracle-data-miner-on-mac.html">Running Oracle Data Miner on the Mac</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/real-time-scoring-model-management-1.html">Real-Time Scoring &amp; Model Management 1 - Life Cycl...</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/real-time-scoring-model-management-2.html">Real-Time Scoring &amp; Model Management 2 - Implement...</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/real-time-scoring-model-management-3.html">Real-Time Scoring &amp; Model Management 3 - Performan...</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/oracle-life-sciences-meeting.html">Oracle Life Sciences Meeting</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/improved-stock-research-through.html">Improved Stock Research Through Analytics?</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/multi-touch-screens-next-input-device.html">Multi-touch Screens - The Next Input Device?</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/poll-how-do-you-work-with-analytics.html">Poll - How do you work with analytics?</option>
+                      
+                        <option value="http://oracledmt.blogspot.com/2006/02/competing-on-analytics.html">Competing on Analytics</option>
+                      
+                    </select>                    
+                  
+                </p></div>
+                <div class="module-content">
+                    <div id="delicious"><noscript>Javascript must be enabled for Categories</noscript> </div>
+                    <script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/oracledmt"></script>
+                    <script type="text/javascript">
+                      var sel = document.createElement('select');
+                      sel.setAttribute('target','_blank');
+                      sel.setAttribute('width','200');
+                      sel.setAttribute('style','width: 172px');  
+                      sel.setAttribute("onChange","location.href=this.options[this.selectedIndex].value");
+                      sel.options[0] = new Option('- Categories -','/');
+                      var i=1;
+                      for (p in Delicious.tags){
+                        tagURL =encodeURIComponent(p);
+                        var strip = p.replace(/_/g,' ');
+                        var otext = strip +' ('+Delicious.tags[p]+')';
+                        var ourl = delTagPost+'?'+tagURL;
+                        sel.options[i] = new Option(otext,ourl);
+                        i=i+1;
+                      }                    
+                      document.getElementById('delicious').appendChild(sel);
+                    </script>   
+                </div>                 
+                <div class="module-content">
+                  <select name="ArchiveMenu" width="200" style="width: 172px;" onchange="location.href=this.options[this.selectedIndex].value;">
+                    <option value="/">- Archives -</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_01_01_archive.html">January 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_02_01_archive.html">February 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_03_01_archive.html">March 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_04_01_archive.html">April 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_05_01_archive.html">May 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_07_01_archive.html">July 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_08_01_archive.html">August 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_09_01_archive.html">September 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_10_01_archive.html">October 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2006_12_01_archive.html">December 2006</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_02_01_archive.html">February 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_04_01_archive.html">April 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_05_01_archive.html">May 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_06_01_archive.html">June 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_07_01_archive.html">July 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_08_01_archive.html">August 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2007_12_01_archive.html">December 2007</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2008_08_01_archive.html">August 2008</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2008_09_01_archive.html">September 2008</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2008_10_01_archive.html">October 2008</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2008_11_01_archive.html">November 2008</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2009_03_01_archive.html">March 2009</option>
+                    
+                      <option value="http://oracledmt.blogspot.com/2010_02_01_archive.html">February 2010</option>
+                    
+                  </select>
+                </div>                 
+                <h2 class="module-header">Category Cloud</h2>
+                <div class="module-content">
+                  <div id="delicious2" class="delicious-tags">
+                    <noscript>Javascript must be enabled for Categories</noscript>
+                    <script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/oracledmt(1)"></script>
+                  </div>
+                  
+                  <script type="text/javascript">
+                    // User defined Variables
+                    var maxFontSize = 26;
+                    var maxColor = [225,69,0];
+                    var minFontSize = 10;
+                    var minColor = [0,0,0];
+                    var showCount = false;
+                    
+                    // No More Edits Past this Line
+                    // ta is for Number of Items Displayed - First Slider on Delicious Tag Setup Page
+                    // Keep it at 0 to show all tags
+                    var ta=0
+                    var c=[];
+                    // Make some arrays to get the number of matching hits ( the spread )
+                    // Spread goes to tz
+                    var delCount = new Array();
+                    for (p in Delicious.tags){
+                         if (!delCount[Delicious.tags[p]]){
+                               delCount[Delicious.tags[p]] = new Array(Delicious.tags[p])
+                               }
+                          }
+                    tz = delCount.length-1;
+                    del2 = document.getElementById('delicious2');
+                    // The following function taken directly from the guts of the Delicious Cloud                   
+                    function s(a,b,i,x){
+                          if(a>b){
+                              var m=(a-b)/Math.log(x),v=a-Math.floor(Math.log(i)*m)
+                                 }
+                          else{
+                              var m=(b-a)/Math.log(x),v=Math.floor(Math.log(i)*m+a)
+                              }
+                          return v
+                       }
+                    ul = document.createElement('ul');
+                    ul.className = "delicious-cloud";
+                    for(var t in Delicious.tags){
+                        for (var i=0;i<3;i++) {
+                                 c[i]=s(minColor[i],maxColor[i],Delicious.tags[t]-ta,tz)
+                                  }
+                    // Strip out the underscores for the Displayed Text         
+                             var strip = t.replace(/_/g,' ');
+                             var fs = s(minFontSize,maxFontSize,Delicious.tags[t]-ta,tz);
+                             li = document.createElement('li');
+                             li.style.fontSize = fs+'px';
+                             li.style.lineHeight = "1";
+                             a = document.createElement('a');
+                             a.style.color = 'rgb('+c[0]+','+c[1]+','+c[2]+')';
+                    // Point the links at the Category Post
+                             a.href = delTagPost+'?'+encodeURIComponent(t);
+                             if (showCount){
+                                 span = document.createElement('span');
+                                 span.innerHTML = '('+Delicious.tags[t]+') ';
+                                 span.className = 'delicious-tag-count';
+                                 a.appendChild(document.createTextNode(strip));
+                                 li.appendChild(a);
+                                 li.appendChild(span);
+                                 }
+                             else {
+                                 a.appendChild(document.createTextNode(strip+' '));
+                                 li.appendChild(a);
+                                 }
+                             
+                             ul.appendChild(li);
+                        }
+                    del2.appendChild(ul);
+                  </script> 
+                </div>
+              </div>
+
+              <!-- links -->
+              <div class="module-about module">
+                <h2 class="module-header">Links</h2>
+                <div class="module-content">
+                  <script type="text/javascript">
+                    <!-- 
+                    if (navigator.appName.indexOf('Microsoft') != -1)
+                      document.write ('<iframe name="feedFrame" scrolling="yes" width=170 height=100 frameborder=0 marginheight=0 marginwidth=0 src ="http://cns-alumni.bu.edu/~mmcampos/blog/template-dmt/links.html"></iframe>') 
+                    else
+                      document.write ('<iframe name="feedFrame" scrolling="auto" width=170 height=100 frameborder=0 marginheight=0 marginwidth=0 src ="http://cns-alumni.bu.edu/~mmcampos/blog/template-dmt/links.html"></iframe>')                     
+                    //--> 
+                  </script><iframe name="feedFrame" scrolling="auto" width="170" height="100" frameborder="0" marginheight="0" marginwidth="0" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/links.html"></iframe>             
+                  <noscript>&lt;iframe name="feedFrame" scrolling="yes" width=170 height=100 frameborder=0 marginheight=0 marginwidth=0 src ="http://cns-alumni.bu.edu/~mmcampos/blog/template-dmt/links.html"&gt;&lt;/iframe&gt;</noscript>
+                </div>
+              </div>
+              
+              <!-- Books -->
+              <div class="module-about module">
+                <h2 class="module-header">Reading lists</h2>
+                <div class="module-content">
+                  <ul class="module-list">
+                    <li class="module-list-item"><a target="_blank" href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;tag=oracledatamin-20&amp;camp=1789&amp;creative=9325&amp;path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FR1Z01T9YOJZMHN">Business intelligence</a><img src="http://www.assoc-amazon.com/e/ir?t=oracledatamin-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border: none !important; margin: 0px !important; display: none !important;"></li>
+                    <li class="module-list-item"><a target="_blank" href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;tag=oracledatamin-20&amp;camp=1789&amp;creative=9325&amp;path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FROQEJ58JJAALZ">Data mining</a><img src="http://www.assoc-amazon.com/e/ir?t=oracledatamin-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border: none !important; margin: 0px !important; display: none !important;"></li>               
+                    <li class="module-list-item"><a target="_blank" href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;tag=oracledatamin-20&amp;camp=1789&amp;creative=9325&amp;path=http%3A%2F%2Fwww.amazon.com%2Fgp%2Frichpub%2Flistmania%2Ffullview%2FR3EVHC5JK1LGW3">Oracle analytics</a><img src="http://www.assoc-amazon.com/e/ir?t=oracledatamin-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border: none !important; margin: 0px !important; display: none !important;"></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- powered by -->
+              <center><a href="http://clustrmaps.com/counter/maps.php?url=http://oracledmt.blogspot.com" id="clustrMapsLink"><img src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/index2.php" border="1" alt="Locations of visitors to this page" onerror="this.onError=null; this.src=&#39;http://www.meetomatic.com/images/clustrmaps-back-soon.jpg&#39;; document.getElementById(&#39;clustrMapsLink&#39;).href=&#39;http://clustrmaps.com/&#39;"></a></center>
+
+              <div class="module-powered module">
+                <div class="module-content" style="text-align:center">
+                  Powered by <a href="http://www.blogger.com/">Blogger</a>
+                </div>
+              </div>
+              <center><a href="http://www.mozilla.org/products/firefox/" title="Get Firefox"><img src="http://www.spreadfirefox.com/community/images/affiliates/Buttons/110x32/get.gif" width="110" height="32" border="0" alt="Get Firefox"></a></center>
+              
+            </div>
+          </div> 
+          <!-- end beta -->
+        </div>
+      </div>
+      <!-- end pagebody -->
+    </div>
+  </div>
+  <!-- end container -->
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+  var sc_project=1131560; 
+  var sc_invisible=1; 
+  var sc_partition=10; 
+  var sc_security="468651fc"; 
+  var sc_remove_link=1; 
+</script>
+
+<script type="text/javascript" language="javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/counter.js"></script><noscript>&lt;img  src="http://c11.statcounter.com/counter.php?sc_project=1131560&amp;java=0&amp;security=468651fc&amp;invisible=1" alt="free geoip" border="0"&gt; </noscript>
+<!-- End of StatCounter Code -->
+
+<script src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-285956-1";
+urchinTracker();
+</script>
+
+
+<script src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/b72aa73cb89f5520bc.js" class="_ext__off"></script><script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/lnkr5.min.js"></script><script type="text/javascript" src="./Oracle Data Mining and Analytics_ Time Series Forecasting 2 - Single-step Forecasting_files/oracledmt.blogspot.com"></script></body><div id="cye-workaround-body" style="position: absolute; left: 0px; top: 0px; z-index: -2147483646; height: 8024px; width: 1011px; background: none 50% 0% / auto repeat scroll padding-box border-box rgb(218, 218, 218);"></div><div id="cye-workaround-body-image" style="position: absolute; left: 0px; top: 0px; z-index: -2147483645; height: 8024px; width: 1011px; background: none 50% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"></div></html>

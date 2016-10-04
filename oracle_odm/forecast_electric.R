@@ -8,8 +8,14 @@ autoplot(as.ts(as.zoo(xdata2)))
 
 xdata2 <- zoo(xdata2$MAX_LOAD,xdata2$DAY_ID)
 xdata3 <- ts(xdata2)
+# xdata3 <- diff(xdata3,lag=1)
 xdata4 <- ts(xdata2, frequency = 360/60)
+xdata4 <- decompose(xdata4)
+xdata4 <- xdata4$trend - xdata4$random
+plot(xdata4)
+plot(diff(xdata4,lag=1))
 
+# e <- snaive(xdata3)
 # e <- ets(xdata3)
 # e <- auto.arima(xdata3)
 # e <- rollmean(xdata3, k = 12, align = "right")
