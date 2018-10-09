@@ -31,7 +31,7 @@ LIMITATIONS:
 ### Example run:
 
 ##### Characterize the data using Tableau
-* Check the folder [raw_data_and_exploratory_viz](https://github.com/karlarao/forecast_examples/tree/master/monte_carlo/raw_data_and_exploratory_viz) for the example file and tableau worksheet. From here you are free to filter data and drill down on the data sample you want to forecast   
+* Check the folder [raw_data_and_exploratory_viz](https://github.com/karlarao/forecast_examples/tree/master/monte_carlo/raw_data_and_exploratory_viz) for the example file and tableau worksheet. From here you are free to filter data and drill down on the data sample you want to forecast. In this example the CPU capacity shows as 28 per host (there could be instance caging set), so on this graph which is a clusterwide aggregation of CPU demand the overall capacity is actually 28x2 (this is a 2node RAC environment). Around Sept 28 to Oct 6 the workload reached the max capacity of the cluster.  
 ![](https://i.imgur.com/I3gjEFR.png)
 * In this example I "keep only" the AAS CPU and then pivoted the data
 ![](https://i.imgur.com/EA2nQSN.png) 
