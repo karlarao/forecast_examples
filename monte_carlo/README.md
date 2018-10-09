@@ -96,7 +96,8 @@ $quantiles
      quantile headroom
 [1,]     0.99       NA
 ``` 
-	* The forecast did not put weight on the more recent spikes or growth of workload and so the output showed that everything is fine for the next 2 months
-	* Just keep this in mind when forecasting!
+
+* The forecast did not put weight on the more recent spikes or growth of workload and so the output showed that everything is fine for the next 2 months
+* Just keep this in mind when forecasting!
 ![](https://i.imgur.com/sxzik3V.png)
 
