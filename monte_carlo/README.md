@@ -41,7 +41,7 @@ LIMITATIONS:
 * Run the script 
 
 ```
-E:\GitHub\forecast_examples\monte_carlo>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R cpu.txt 99 120 0.99 1 1600
+E:\GitHub\forecast_examples\monte_carlo>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R cpu.txt 99 120 0.99 0 1600
 Running Monte Carlo. Please wait
 null device
           1
@@ -56,7 +56,7 @@ Then view the cpu.pdf output
 * In this data example, per row or data is 1hour and we are looking at the past 120 data to forecast with .99 accuracy the next 1600 which is equivalent to about 66 days (1600/24hours)
 * In terms of capacity planning this cluster, we have about 2months to reach the 75% CPU utilization range. We can either do a remediation on the workload (tuning) or add more machines to the cluster (2months lead time).   
 
-![](https://i.imgur.com/pMzsYaX.png)
+![](https://i.imgur.com/J65h63C.png)
 
 
 
@@ -85,7 +85,7 @@ And this will output to
 	* The smooth window (default 120) looks back to the recent 120 samples to give "more weight" vs older data (the ones older than 120 samples)  
 	* Here we set the smooth window to 1600 (2months) which is equivalent to the oldest data where the workload was still better and no spikes are occurring
 ```
-E:\GitHub\forecast_examples\monte_carlo>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R cpu.txt 99 1600 0.99 1 1600
+E:\GitHub\forecast_examples\monte_carlo>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R cpu.txt 99 1600 0.99 0 1600
 Running Monte Carlo. Please wait
 null device
           1
@@ -99,5 +99,5 @@ $quantiles
 
 * The forecast did not put weight on the more recent spikes or growth of workload and so the output showed that everything is fine for the next 2 months
 * Just keep this in mind when forecasting!
-![](https://i.imgur.com/sxzik3V.png)
+![](https://i.imgur.com/6cCDJex.png)
 
