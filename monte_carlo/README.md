@@ -1,6 +1,6 @@
 
 
-### Setup:
+### R script HOWTO:
 ```
 How to setup:
 * Setup R on your computer
