@@ -23,12 +23,25 @@ EXAMPLE:
 Rscript analyze.R cpu.txt 96 120 0.99 1 200
 
 OUTPUT:
-PDF of plot  (same name as input file except with PDF extension) tab delimited file with HRE at quantile chosen on input [see default above]
+PDF of plot  (same name as input file except with PDF extension) tab delimited file with HRE 
+at quantile chosen on input [see default above]
 
 LIMITATIONS:
-Right now, the program doesn’t look at the date column, only the data column and assumes that the dates are increasing one day or sample at a time. So, if this is not the case, it can give some wrong results. This will be fixed in the future. 
+Right now, the program doesn’t look at the date column, only the data column and assumes that 
+the dates are increasing one day or sample at a time. So, if this is not the case, it can 
+give some wrong results. This will be fixed in the future. 
 
 ```
+
+
+##### NOTE:
+
+* Read the PDF - [CPU capacity forecasting and node failure scenarios](https://github.com/karlarao/forecast_examples/blob/master/monte_carlo/HOWTO_CPU%20capacity%20forecasting%20and%20node%20failure%20scenarios.pdf) to learn how to apply forecasting with sizing scenarios 
+* The entire exercise files and output are available on this folder [4_node_rac_cluster_forecast](https://github.com/karlarao/forecast_examples/tree/master/monte_carlo/4_node_rac_cluster_forecast) 
+
+
+
+
 
 ### Example run:
 
@@ -59,6 +72,10 @@ Right now, the program doesn’t look at the date column, only the data column a
 ![](https://i.imgur.com/qV1ePzR.png)
 
 
-### Other forecast examples:
+## Other forecast examples:
+
+![](https://i.imgur.com/s07lSV6.png)
+
+![](https://i.imgur.com/R8dYFFE.png)
 
 
