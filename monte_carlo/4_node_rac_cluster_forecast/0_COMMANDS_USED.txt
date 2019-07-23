@@ -1,0 +1,72 @@
+
+E:\GitHub\forecast_examples\monte_carlo\tmp>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R clusterwide.txt 128 30 .99 0 365
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] 314
+
+$quantiles
+     quantile headroom
+[1,]     0.99      165
+
+E:\GitHub\forecast_examples\monte_carlo\tmp>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R clusterwide.txt 96 30 .99 0 365
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] 193
+
+$quantiles
+     quantile headroom
+[1,]     0.99       48
+
+E:\GitHub\forecast_examples\monte_carlo\tmp>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R node1.txt 32 30 .99 0 365
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] NA
+
+$quantiles
+     quantile headroom
+[1,]     0.99        1
+
+E:\GitHub\forecast_examples\monte_carlo\tmp>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R node2.txt 32 30 .99 0 365
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] 95
+
+$quantiles
+     quantile headroom
+[1,]     0.99       48
+
+
+E:\GitHub\forecast_examples\monte_carlo\tmp>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R node3.txt 32 30 .99 0 365
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] NA
+
+$quantiles
+     quantile headroom
+[1,]     0.99       NA
+
+
+E:\GitHub\forecast_examples\monte_carlo\tmp>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R node4.txt 32 30 .99 0 365
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] 116
+
+$quantiles
+     quantile headroom
+[1,]     0.99       67
+
+
+
+
