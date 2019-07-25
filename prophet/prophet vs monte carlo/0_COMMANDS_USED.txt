@@ -1,0 +1,65 @@
+
+###############
+DEFAULT RUN
+###############
+
+E:\GitHub\forecast_examples\prophet>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R data.txt 8.5
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] NA
+
+$quantiles
+     quantile headroom
+[1,]    0.950       NA
+[2,]    0.975       NA
+[3,]    0.990       NA
+
+###############
+FULL PARAMS, BUT EQUIVALENT TO DEFAULT RUN
+###############
+
+E:\GitHub\forecast_examples\prophet>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R data.txt 8.5 120 .99 0 1826
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] NA
+
+$quantiles
+     quantile headroom
+[1,]     0.99       NA
+
+###############
+FULL PARAMS, LOOK BACK ON ALL PREVIOUS DATA
+###############
+
+E:\GitHub\forecast_examples\prophet>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R data.txt 8.5 2863 .99 0 1826
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] 844
+
+$quantiles
+     quantile headroom
+[1,]     0.99        1
+
+###############
+FULL PARAMS, LOOK BACK JUST ON THE PREVIOUS 38% OF THE DATA (1099 DATA POINTS) AND FORECAST 1826 DATA POINTS AHEAD 
+###############
+
+E:\GitHub\forecast_examples\prophet>"C:\Program Files\R\R-3.2.2\bin\Rscript.exe" analyze.R data.txt 8.5 1099 .99 0 1826
+Running Monte Carlo. Please wait
+null device
+          1
+$mean
+[1] 1797
+
+$quantiles
+     quantile headroom
+[1,]     0.99      508
+
+
+
